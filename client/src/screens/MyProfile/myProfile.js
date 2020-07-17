@@ -44,6 +44,8 @@ class ProfileDetails extends Component {
             <div className="age">{profile.age}</div>
             <div className="recentReview">{profile.recentReview}</div>
             <div className="hometown">{profile.homeTown}</div>
+            <button className="edit-button"><Link className="edit-link" to={`/profile/${profile._id}/create`}>Edit</Link></button>
+                            <button className="delete-button" onClick={() => deleteProfile(profile._id)}>Delete</button>
           </div>
         </div>
       </Layout>
