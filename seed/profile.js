@@ -9,6 +9,7 @@ const main = async () => {
       fullName: "Jackie Jane",
       email: "jackie-jane@jamesmadison.edu",
       password: "Hello123",
+      profilePicture: "test.png",
       bio: "I am a student GA.",
       School: "James Madison University",
       Major: "Film Studies",
