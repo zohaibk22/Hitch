@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { getProfile, updateProfile } from '../../../services/profile'
 
 class Form extends Component {
   constructor(props) {
@@ -17,9 +18,9 @@ class Form extends Component {
     }
   }
   async componentDidMount() {
-    let { id } = this.props.match.params
-    const product = await getProfile(id)
-    this.setState({ profile })
+    // let { id } = 
+    // const profile = await getProfile(id)
+    // this.setState({ profile })
   }
   render() {
     return (
