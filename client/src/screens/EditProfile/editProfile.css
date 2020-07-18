@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700');
+
 .inputC {
   width: 381px;
   height: 75px;
@@ -14,7 +16,7 @@ input {
   width: 350.5px;
   height: 62px;
   border: none;
-  font-family: OpenSans;
+  font-family: 'Open Sans', sans-serif;
   font-size: 24px;
   font-weight: normal;
   font-stretch: normal;
@@ -29,7 +31,7 @@ input:focus{
 label {
   width: 378px;
   height: 60px;
-  font-family: OpenSans;
+  font-family: 'Open Sans', sans-serif;
   font-size: 24px;
   font-weight: bold;
   font-stretch: normal;
@@ -47,7 +49,30 @@ label {
   margin-right: 30px;
 }
 .bio {
-  display: flex;
-  flex-direction: column;
   margin-left: 81px;
+}
+.bioInputC {
+  width: 786px;
+  height: 200px;
+  margin-top: 4px;
+  border-radius: 10px;
+  border: 2px solid lightgray;
+  background-color: #ffffff;
+}
+textarea {
+  width: 729px;
+  border: none;
+  height: 108px;
+  margin-left: 12px;
+  margin-right: 108px;
+  margin-top: 0;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 24px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #051d54;
+  resize: none;
 }

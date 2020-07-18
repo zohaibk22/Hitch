@@ -4,6 +4,7 @@ import CreateProfileButton from '../../components/EditProfile/Button/CreateProfi
 import { withRouter } from 'react-router-dom'
 import axios from 'axios'
 import './editProfile.css'
+import Heading from '../../components/EditProfile/Heading/Heading'
 
 class EditProfile extends Component {
   constructor(props) {
@@ -57,6 +58,7 @@ class EditProfile extends Component {
     console.log(profile.fullName)
     return (
       <>
+        <Heading />
         <form className='editForm' onSubmit={this.handleSubmit}>
           <div className='formC'>
             <div className='formItem'>
@@ -108,9 +110,9 @@ class EditProfile extends Component {
           </div>
           <div className='bio'>
             <label>Bio:</label>
-            <div className='inputC'>
-              <input type='text' id='bio' name='bio'
-                defaultValue={profile.bio} onChange={this.handleChange}></input>
+            <div className='bioInputC'>
+              <textarea type='text' id='bio' name='bio' className='bioInput'
+                defaultValue={profile.bio} onChange={this.handleChange}></textarea>
             </div>
           </div>
           <CreateProfileButton />
