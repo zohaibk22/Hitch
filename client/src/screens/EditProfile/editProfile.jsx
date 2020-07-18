@@ -31,20 +31,22 @@ class EditProfile extends Component {
   // }
   async componentDidMount() {
     let { id } = this.props.match.params
-    const profile = await axios(`https://hitch-account-info.herokuapp.com/api/profile/${id}`)
-    console.log(profile.data)
-    this.setState({
-      fullName: profile.data.fullName,
-      profilePicture: profile.data.profilePicture,
-      bio: profile.data.bio,
-      school: profile.data.School,
-      major: profile.data.Major,
-      graduationYear: profile.data.GraduationYear,
-      age: profile.data.age,
-      recentReview: profile.data.recentReview,
-      hometown: profile.data.hometown,
-      active: null,
-    })
+    const res = await axios(`https://hitch-account-info.herokuapp.com/api/profile/${id}`)
+    console.log(res.data)
+    const profile = res.data
+    this.setState({ profile })
+    // this.setState({
+    //   fullName: profile.data.fullName,
+    //   profilePicture: profile.data.profilePicture,
+    //   bio: profile.data.bio,
+    //   school: profile.data.School,
+    //   major: profile.data.Major,
+    //   graduationYear: profile.data.GraduationYear,
+    //   age: profile.data.age,
+    //   recentReview: profile.data.recentReview,
+    //   hometown: profile.data.hometown,
+    //   active: null,
+    // })
   }
   handleChange = (event) => {
     const { name, value } = event.target
@@ -56,49 +58,50 @@ class EditProfile extends Component {
     })
   }
   render() {
+    const { profile } = this.state
     return (
       <>
         <form className='editForm' onSubmit={this.handleSubmit}>
           <div className='formC'>
             <div className='formItem'>
-              <label htmlFor='fullName'>Full Name:</label>
+              <label>Full Name:</label>
               <input type='text' id='fullName' name='fullName'
-                value={this.state.fullName} onChange={this.handleChange}></input>
+                defaultValue={profile.fullName} onChange={this.handleChange}></input>
             </div>
             <div className='formItem'>
-              <label htmlFor='hometown'>Hometown:</label>
+              <label>Hometown:</label>
               <input type='text' id='hometown' name='hometown'
-                value={this.state.hometown} onChange={this.handleChange}></input>
+                defaultValue={profile.hometown} onChange={this.handleChange}></input>
             </div>
           </div>
           <div className='formC'>
             <div className='formItem'>
-              <label htmlFor='school'> School:</label>
+              <label>School:</label>
               <input type='text' id='school' name='school'
-                value={this.state.school} onChange={this.handleChange}></input>
+                defaultValue={profile.school} onChange={this.handleChange}></input>
             </div>
             <div className='formItem'>
-              <label htmlFor='major'>Major:</label>
+              <label>Major:</label>
               <input type='text' id='major' name='major'
-                value={this.state.major} onChange={this.handleChange}></input>
+                defaultValue={profile.major} onChange={this.handleChange}></input>
             </div>
           </div>
           <div className='formC'>
             <div className='formItem'>
-              <label htmlFor='gradYear'>Graduation Year:</label>
+              <label>Graduation Year:</label>
               <input type='text' id='gradYear' name='gradYear'
-                value={this.state.graduationYear} onChange={this.handleChange}></input>
+                defaultValue={profile.graduationYear} onChange={this.handleChange}></input>
             </div>
             <div className='formItem'>
-              <label htmlFor='age'>Age:</label>
+              <label>Age:</label>
               <input type='text' id='age' name='age'
-                value={this.state.age} onChange={this.handleChange}></input>
+                defaultValue={profile.age} onChange={this.handleChange}></input>
             </div>
           </div>
           <div className='bio'>
-            <label htmlFor='bio'>Bio:</label>
+            <label>Bio:</label>
             <input type='text' id='bio' name='bio'
-              value={this.state.bio} onChange={this.handleChange}></input>
+              defaultValue={profile.bio} onChange={this.handleChange}></input>
           </div>
         </form>
         <CreateProfileButton />
