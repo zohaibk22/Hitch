@@ -3,6 +3,6 @@ import './CreateProfile.css'
 
 export default function CreateProfileButton(props) {
   return (
-    <button>Create Profile</button>
+    <button type='submit'>Create Profile</button>
   );
 }

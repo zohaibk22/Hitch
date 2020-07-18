@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import CreateProfileButton from '../../components/EditProfile/Button/CreateProfileButton'
-// import { getProfile } from '../../services/profile'
+import { updateProfile } from '../../services/profile'
 import { withRouter } from 'react-router-dom'
 import axios from 'axios'
 
@@ -18,8 +18,8 @@ class EditProfile extends Component {
         age: '',
         recentReview: '',
         hometown: '',
-        active: null,
-      }
+        active: true,
+      },
     }
   }
   // async componentDidMount() {
@@ -35,18 +35,6 @@ class EditProfile extends Component {
     console.log(res.data)
     const profile = res.data
     this.setState({ profile })
-    // this.setState({
-    //   fullName: profile.data.fullName,
-    //   profilePicture: profile.data.profilePicture,
-    //   bio: profile.data.bio,
-    //   school: profile.data.School,
-    //   major: profile.data.Major,
-    //   graduationYear: profile.data.GraduationYear,
-    //   age: profile.data.age,
-    //   recentReview: profile.data.recentReview,
-    //   hometown: profile.data.hometown,
-    //   active: null,
-    // })
   }
   handleChange = (event) => {
     const { name, value } = event.target
@@ -56,6 +44,12 @@ class EditProfile extends Component {
         [name]: value
       }
     })
+  }
+  handleSubmit = async (event) => {
+    event.preventDefault()
+    let { id } = this.props.match.params
+    const profile = await updateProfile(id, this.state.profile)
+    console.log(profile)
   }
   render() {
     const { profile } = this.state
@@ -103,8 +97,8 @@ class EditProfile extends Component {
             <input type='text' id='bio' name='bio'
               defaultValue={profile.bio} onChange={this.handleChange}></input>
           </div>
+          <CreateProfileButton />
         </form>
-        <CreateProfileButton />
       </>
     );
   }
