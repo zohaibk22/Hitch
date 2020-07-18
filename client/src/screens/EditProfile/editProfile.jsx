@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import CreateProfileButton from '../../components/EditProfile/Button/CreateProfileButton'
-import { updateProfile } from '../../services/profile'
+// import { updateProfile } from '../../services/profile'
 import { withRouter } from 'react-router-dom'
 import axios from 'axios'
+import './editProfile.css'
 
 class EditProfile extends Component {
   constructor(props) {
@@ -48,54 +49,69 @@ class EditProfile extends Component {
   handleSubmit = async (event) => {
     event.preventDefault()
     let { id } = this.props.match.params
-    const profile = await updateProfile(id, this.state.profile)
+    const profile = await axios.put(`https://hitch-account-info.herokuapp.com/api/profile/${id}`, this.state.profile)
     console.log(profile)
   }
   render() {
     const { profile } = this.state
+    console.log(profile.fullName)
     return (
       <>
         <form className='editForm' onSubmit={this.handleSubmit}>
           <div className='formC'>
             <div className='formItem'>
               <label>Full Name:</label>
-              <input type='text' id='fullName' name='fullName'
-                defaultValue={profile.fullName} onChange={this.handleChange}></input>
+              <div className='inputC'>
+                <input type='text' id='fullName' name='fullName'
+                  value={profile.fullName} onChange={this.handleChange}></input>
+              </div>
             </div>
             <div className='formItem'>
               <label>Hometown:</label>
-              <input type='text' id='hometown' name='hometown'
-                defaultValue={profile.hometown} onChange={this.handleChange}></input>
+              <div className='inputC'>
+                <input type='text' id='hometown' name='hometown'
+                  defaultValue={profile.hometown} onChange={this.handleChange}></input>
+              </div>
             </div>
           </div>
           <div className='formC'>
             <div className='formItem'>
               <label>School:</label>
-              <input type='text' id='school' name='school'
-                defaultValue={profile.school} onChange={this.handleChange}></input>
+              <div className='inputC'>
+                <input type='text' id='school' name='school'
+                  defaultValue={profile.school} onChange={this.handleChange}></input>
+              </div>
             </div>
             <div className='formItem'>
               <label>Major:</label>
-              <input type='text' id='major' name='major'
-                defaultValue={profile.major} onChange={this.handleChange}></input>
+              <div className='inputC'>
+                <input type='text' id='major' name='major'
+                  defaultValue={profile.major} onChange={this.handleChange}></input>
+              </div>
             </div>
           </div>
           <div className='formC'>
             <div className='formItem'>
               <label>Graduation Year:</label>
-              <input type='text' id='gradYear' name='gradYear'
-                defaultValue={profile.graduationYear} onChange={this.handleChange}></input>
+              <div className='inputC'>
+                <input type='text' id='gradYear' name='gradYear'
+                  defaultValue={profile.graduationYear} onChange={this.handleChange}></input>
+              </div>
             </div>
             <div className='formItem'>
               <label>Age:</label>
-              <input type='text' id='age' name='age'
-                defaultValue={profile.age} onChange={this.handleChange}></input>
+              <div className='inputC'>
+                <input type='text' id='age' name='age'
+                  defaultValue={profile.age} onChange={this.handleChange}></input>
+              </div>
             </div>
           </div>
           <div className='bio'>
             <label>Bio:</label>
-            <input type='text' id='bio' name='bio'
-              defaultValue={profile.bio} onChange={this.handleChange}></input>
+            <div className='inputC'>
+              <input type='text' id='bio' name='bio'
+                defaultValue={profile.bio} onChange={this.handleChange}></input>
+            </div>
           </div>
           <CreateProfileButton />
         </form>
