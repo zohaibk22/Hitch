@@ -4,6 +4,7 @@ import CreateProfileButton from '../../components/EditProfile/Button/CreateProfi
 import { withRouter } from 'react-router-dom'
 import axios from 'axios'
 import './editProfile.css'
+import Header from '../../components/shared/Header/header'
 import Heading from '../../components/EditProfile/Heading/Heading'
 
 class EditProfile extends Component {
@@ -58,6 +59,7 @@ class EditProfile extends Component {
     console.log(profile.fullName)
     return (
       <>
+        <Header />
         <Heading />
         <form className='editForm' onSubmit={this.handleSubmit}>
           <div className='formC'>
