@@ -7,6 +7,7 @@ import './editProfile.css'
 import Main from '../../components/shared/Main/Main'
 import Heading from '../../components/EditProfile/Heading/Heading'
 import Header from '../../components/shared/Header/header'
+import Footer from '../../components/shared/Footer/footer'
 
 class EditProfile extends Component {
   constructor(props) {
@@ -122,6 +123,7 @@ class EditProfile extends Component {
             <CreateProfileButton />
           </form>
         </Main>
+        <Footer />
       </>
     );
   }
