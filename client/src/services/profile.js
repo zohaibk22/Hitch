@@ -21,7 +21,7 @@ export const createProfile = async (profile) => {
 export const updateProfile = async (id, profile) => {
   try {
     const response = api.put(`/profile/${id}`, profile);
-    response.data;
+    return response.data;
   } catch (error) {
     throw error;
   }

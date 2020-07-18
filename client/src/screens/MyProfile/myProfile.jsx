@@ -2,10 +2,11 @@ import React, { Component } from 'react'
 import './myProfile.css'
 import Layout from '../../components/shared/Layout/Layout'
 import { getProfile, deleteProfile } from '../../services/profile'
-import { Link } from 'react-router-dom'
+import { withRouter } from 'react-router-dom'
+import axios from 'axios'
 
 
-class ProfileDetails extends Component {
+class MyProfile extends Component {
   constructor(props) {
     super(props) 
     this.state = {
@@ -24,13 +25,26 @@ class ProfileDetails extends Component {
     }
   }
 
+  //async componentDidMount() {
+    //let { id } = this.props.match.params
+    //const profile = await getProfile(id)
+    //this.setState({ profile })
+  //}
+
+
   async componentDidMount() {
     let { id } = this.props.match.params
-    const profile = await getProfile(id)
+    const res = await axios(`https://hitch-account-info.herokuapp.com/api/profile/${id}`)
+    console.log(res.data)
+    const profile = res.data
     this.setState({ profile })
   }
+
+
+
   render() {
     const { profile } = this.state
+    console.log(profile.bio)
     return (
       <Layout>
         <div className="profile-details">
@@ -44,8 +58,7 @@ class ProfileDetails extends Component {
             <div className="age">{profile.age}</div>
             <div className="recentReview">{profile.recentReview}</div>
             <div className="hometown">{profile.homeTown}</div>
-            <button className="edit-button"><Link className="edit-link" to={`/profile/${profile._id}/create`}>Edit</Link></button>
-                            <button className="delete-button" onClick={() => deleteProfile(profile._id)}>Delete</button>
+        
           </div>
         </div>
       </Layout>
@@ -53,4 +66,4 @@ class ProfileDetails extends Component {
   }
 }
 
-export default ProfileDetails
+export default withRouter (MyProfile)
