@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { createProfile } from "../../services/profile";
 import "./createProfile.css";
+import {Redirect} from 'react-router-dom'
+
 
 class CreateProfile extends Component {
   constructor() {
@@ -17,21 +19,39 @@ class CreateProfile extends Component {
   }
 
   handleChange = (event) => {
-    const { input, value } = event.target;
+    const { name, value } = event.target;
     this.setState({
       profile: {
         ...this.state.profile,
-        [input]: value,
+        [name]: value,
       },
     });
   };
 
+  handleSubmit = async (event) => {
+    event.preventDefualt()
+    const {password, confirmPassword} = this.state.profile
+    if(confirmPassword !== password){
+      alert("Passwords do not match. Try Again")
+    }
+    else{
+      const created = await createProfile(this.state.profile)
+      this.setState ({
+      created
+     })
+    }
+
+
+  }
+
   render() {
     const { profile, created } = this.state;
 
-    // if(created) {
-    //     return <
-    // }
+    if(created) { 
+      return <Redirect to={`/`} />
+
+    }
+
 
     return (
       //<Layout>
@@ -39,33 +59,36 @@ class CreateProfile extends Component {
         <h1>CREATE USER PAGE</h1>
         <form>
           <input
-            type="text"
+            type='text'
             placeholder="Email Address"
             className="user-email"
-            input="email"
+            value={profile.email}
+            name="email"
             onChange={this.handleChange}
           />
           <input
-            type="text"
+            type='password'
             placeholder="Password"
             className="user-password"
-            input="password"
+            value={profile.password}
+            name="password"
+            required
             onChange={this.handleChange}
           />
 
           <input
-            type="text"
+            type='password'
             placeholder="Confirm Password"
             className="user-password"
-            input="confirm-password"
+            value={profile.confirmPassword}
+            name="confirmPassword"
             onChange={this.handleChange}
           />
 
-          <input
-            type="button"
-            value="Submit"
-            className="create-profile-button"
-          />
+        
+           <button  type= "submit" className="create-profile-button"
+            onSubmit={this.handleSubmit}
+          >Submit</button>
         </form>
       </>
       //</Layout>
