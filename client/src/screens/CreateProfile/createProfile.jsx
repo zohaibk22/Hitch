@@ -31,13 +31,15 @@ class CreateProfile extends Component {
   handleSubmit = async (event) => {
     event.preventDefualt()
     const {password, confirmPassword} = this.state.profile
+    console.log(password)
     if(confirmPassword !== password){
       alert("Passwords do not match. Try Again")
+      console.log("password incorrect")
     }
     else{
       const created = await createProfile(this.state.profile)
       this.setState ({
-      created
+      created:true
      })
     }
 
@@ -48,7 +50,7 @@ class CreateProfile extends Component {
     const { profile, created } = this.state;
 
     if(created) { 
-      return <Redirect to={`/`} />
+      return <Redirect to={`/profiles`} />
 
     }
 
@@ -64,6 +66,7 @@ class CreateProfile extends Component {
             className="user-email"
             value={profile.email}
             name="email"
+            required
             onChange={this.handleChange}
           />
           <input
@@ -82,6 +85,7 @@ class CreateProfile extends Component {
             className="user-password"
             value={profile.confirmPassword}
             name="confirmPassword"
+            required
             onChange={this.handleChange}
           />
 

@@ -11,7 +11,7 @@ export const getProfile = async (id) => {
 
 export const createProfile = async (profile) => {
   try {
-    const response = await api.post("/profile", profile);
+    const response = await api.post("/profile/create", profile);
     return response.data;
   } catch (error) {
     throw error;
