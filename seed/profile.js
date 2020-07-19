@@ -9,6 +9,7 @@ const main = async () => {
       fullName: "Jackie Jane",
       email: "jackie-jane@jamesmadison.edu",
       password: "Hello123",
+      profilePicture: "test.png",
       bio: "I am a student GA.",
       school: "James Madison University",
       major: "Film Studies",
@@ -16,6 +17,7 @@ const main = async () => {
       age: "18",
       recentReview: "Ride was great! 5 Stars!",
       hometown: "New York City",
+      active: true,
     },
   ];
 
