@@ -1,0 +1,15 @@
+.infoC {
+height: 557px;
+width: 100%;
+background-color: white;
+display: flex;
+flex-direction: column;
+}
+.hopwItWorks {
+  height: 73px;
+  width: 400px;
+}
+.imgArray {
+  display: flex;
+  flex-direction: row;
+}

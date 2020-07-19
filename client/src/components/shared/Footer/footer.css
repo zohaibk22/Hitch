@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700');
+footer {
+  background-color: #051d54;
+  width: 100%;
+  height: 534px;
+  display: flex;
+  flex-direction: row;
+}
+h4 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+  margin-bottom: 27px;
+}
+p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 24px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+  margin-top: -20px;
+  margin-bottom: 25px;
+}
+.footerColumnOne {
+  padding-left: 119px;
+  width: 351px;
+  margin-right: 51px;
+}
+.footerColumn {
+  width: 351px;
+  margin-right: 51px;
+}
+.footerItemSocial {
+  margin-left: 6px;
+}
+.copyright {
+  position: absolute;
+  margin-top: 473px;
+  margin-left: 568px;
+  width: 293px;
+  height: 35px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 24px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+}
