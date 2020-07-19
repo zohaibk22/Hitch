@@ -3,9 +3,11 @@ import { Route } from 'react-router-dom'
 import EditProfile from './screens/EditProfile/editProfile'
 import Home from './screens/Home/Home'
 import './App.css';
+import MyProfile from './screens/MyProfile/myProfile';
 
 function App() {
   return (
+
     <>
       <Route exact path="/profile/update/:id">
         <EditProfile />
@@ -14,6 +16,9 @@ function App() {
         <Home />
       </Route>
     </>
+    <Route exact path="/profile/:id">
+      <MyProfile />
+    </Route>
   );
 }
 

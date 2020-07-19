@@ -20,7 +20,7 @@ export const createProfile = async (profile) => {
 
 export const updateProfile = async (id, profile) => {
   try {
-    const response = api.put(`/profile/update/${id}`, profile);
+    const response = api.put(`/profile/${id}`, profile);
     return response.data;
   } catch (error) {
     throw error;
@@ -34,4 +34,5 @@ export const deleteProfile = async (id) => {
   } catch (error) {
     throw error;
   }
+
 };
