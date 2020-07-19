@@ -34,4 +34,5 @@ export const deleteProfile = async (id) => {
   } catch (error) {
     throw error;
   }
+
 };

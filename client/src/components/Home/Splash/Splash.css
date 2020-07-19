@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700');
+.splash {
+  background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url('https://i.imgur.com/zIopf1S.jpg');
+  width: 100%;
+  height: 650px;
+  background-size: cover;
+  background-position-y: center;
+  display: flex;
+  flex-direction: column;
+}
+.welcome {
+  height: 169px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 163px;
+  margin-left: -13px;
+}
+h1 {
+  font-family: 'Open Sans', sans-serif;
+  align-self: center;
+  margin-bottom: 34px;
+  font-size: 64px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+}
+p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+
+}

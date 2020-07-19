@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700');
+h1 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 64px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: rgb(0, 160, 154);
+  margin-bottom: 24px;
+  margin-left: 88px;
+  margin-top: 0;
+  padding-top: 78px;
+}
