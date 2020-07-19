@@ -4,7 +4,7 @@ import './footer.css'
 function Footer(props) {
   return (
     <footer>
-      <div className='footerColumn'>
+      <div className='footerColumnOne'>
         <div className='footerItem'>
           <h4>Get to Know Us</h4>
           <p>About Hitch</p>

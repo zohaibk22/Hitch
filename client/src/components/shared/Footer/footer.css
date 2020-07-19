@@ -5,7 +5,6 @@ footer {
   height: 534px;
   display: flex;
   flex-direction: row;
-  padding-left: 115px;
 }
 h4 {
   font-family: 'Open Sans', sans-serif;
@@ -30,6 +29,11 @@ p {
   margin-top: -20px;
   margin-bottom: 25px;
 }
+.footerColumnOne {
+  padding-left: 119px;
+  width: 351px;
+  margin-right: 51px;
+}
 .footerColumn {
   width: 351px;
   margin-right: 51px;
@@ -40,7 +44,7 @@ p {
 .copyright {
   position: absolute;
   margin-top: 473px;
-  margin-left: 526px;
+  margin-left: 568px;
   width: 293px;
   height: 35px;
   font-family: 'Open Sans', sans-serif;
