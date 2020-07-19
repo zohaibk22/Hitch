@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
 import './myProfile.css'
-import Layout from '../../components/shared/Layout/Layout'
-import { getProfile, deleteProfile } from '../../services/profile'
 import { withRouter } from 'react-router-dom'
 import axios from 'axios'
 
@@ -46,7 +44,7 @@ class MyProfile extends Component {
     const { profile } = this.state
     console.log(profile.bio)
     return (
-      <Layout>
+      
         <div className="profile-details">
           <img className="profile-details-image" src={profile.imgUrl} alt={profile.name} />
           <div className="detail">
@@ -61,7 +59,7 @@ class MyProfile extends Component {
         
           </div>
         </div>
-      </Layout>
+      
     )
   }
 }
