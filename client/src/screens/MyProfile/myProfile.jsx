@@ -5,7 +5,7 @@ import axios from 'axios'
 import Main from '../../components/shared/Main/Main'
 import Header from '../../components/shared/Header/header'
 import Footer from '../../components/shared/Footer/footer'
-
+import { getProfile } from "../../services/profile"
 
 class MyProfile extends Component {
   constructor(props) {
@@ -27,20 +27,24 @@ class MyProfile extends Component {
     }
   }
 
-  //async componentDidMount() {
-    //let { id } = this.props.match.params
-    //const profile = await getProfile(id)
-    //this.setState({ profile })
-  //}
-
-
   async componentDidMount() {
+    //debugger
     let { id } = this.props.match.params
-    const res = await axios(`https://hitch-account-info.herokuapp.com/api/profile/${id}`)
-    console.log(res.data)
-    const profile = res.data
+    //debugger
+    const profile = await getProfile(id)
+    //debugger
+    console.log(profile)
     this.setState({ profile })
   }
+
+
+  // async componentDidMount() {
+  //   let { id } = this.props.match.params
+  //   const res = await axios(`https://hitch-account-info.herokuapp.com/api/profile/${id}`)
+  //   console.log(res.data)
+  //   const profile = res.data
+  //   this.setState({ profile })
+  // }
 
 
 

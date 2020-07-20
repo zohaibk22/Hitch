@@ -2,9 +2,13 @@ import api from "./apiConfig";
 
 export const getProfile = async (id) => {
   try {
-    const response = await api.get(`/profile/${id}`);
+    debugger
+    const response = await api.get(`https://hitch-account-info.herokuapp.com/api/profile/${id}`);
+    debugger
+    console.log(response)
     return response.data;
   } catch (error) {
+    console.log(error)
     throw error;
   }
 };
