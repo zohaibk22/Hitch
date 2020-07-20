@@ -1,14 +1,8 @@
 .create-profile-button{
-  width: 230px;
-  height: 44px;
-  font-family: OpenSans;
-  font-size: 24px;
-  font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  color: #ffffff;
+  width: 475px;
+  height: 75px;
+  border-radius: 10px;
+  background-color: #e96e2d;
 }
 
 .heading {

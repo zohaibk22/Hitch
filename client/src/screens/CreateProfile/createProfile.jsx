@@ -62,7 +62,7 @@ class CreateProfile extends Component {
 
     return (
       <Layout>
-      <>
+      <div className = 'create-user-container'>
         <h1 className= "heading">Create an Account</h1>
         <form onSubmit={this.handleSubmit}>
           <input
@@ -96,9 +96,9 @@ class CreateProfile extends Component {
 
         
            <button  type= "submit" className="create-profile-button"
-          >Sign In</button>
+          >Create Account</button>
         </form>
-      </>
+      </div>
       </Layout>
     );
   }
