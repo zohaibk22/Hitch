@@ -78,7 +78,7 @@ class MyProfile extends Component {
                 </div>
 
               <h2 className="recentReview">Most Recent Review</h2>
-              <div className="review-text">{profile.recentReview}</div>
+              <div className="review-text">"{profile.recentReview}"</div>
               <h2 className="travel-pref">Travel Preferences</h2>
             
             
