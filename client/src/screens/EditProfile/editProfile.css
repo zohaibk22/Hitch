@@ -1,9 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700');
 
-.inputC {
-  width: 381px;
-  height: 75px;
-  border-radius: 10px;
+input {
   margin-top: 4px;
   margin-bottom: 28px;
   border: 2px solid lightgray;
@@ -11,22 +8,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
-input {
-  width: 350.5px;
-  height: 62px;
-  border: none;
+  width: 343px;
+  height: 58px;
+  border-radius: 10px;
   font-family: 'Open Sans', sans-serif;
   font-size: 24px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
   color: #051d54;
+  padding: 7px 15.9px 6px 11.4px;
 }
 input:focus{
-  outline: none;
+  border-color: rgb(243, 111, 58);
+  outline: none
 }
 label {
   width: 378px;
@@ -34,10 +26,6 @@ label {
   font-family: 'Open Sans', sans-serif;
   font-size: 24px;
   font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
   color: rgb(77, 86, 114);
 }
 .formC {
@@ -50,29 +38,26 @@ label {
 }
 .bio {
   margin-left: 81px;
+  display: flex;
+  flex-direction: column;
 }
-.bioInputC {
-  width: 786px;
-  height: 200px;
-  margin-top: 4px;
+textarea {
+  width: 754px;
+  height: 165px;
   border-radius: 10px;
   border: 2px solid lightgray;
   background-color: #ffffff;
-}
-textarea {
-  width: 729px;
-  border: none;
-  height: 108px;
-  margin-left: 12px;
-  margin-right: 108px;
-  margin-top: 0;
+  resize: none;
+  margin-top: -22px;
+  padding: 17px 10px 14px 18px;
   font-family: 'Open Sans', sans-serif;
   font-size: 24px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
   color: #051d54;
   resize: none;
 }
+
+textarea:focus {
+  border-color: rgb(243, 111, 58);
+  outline: none
+}
+

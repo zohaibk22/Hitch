@@ -1,0 +1,104 @@
+.my-profile {
+  font-family: OpenSans;
+  font-size: 64px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #0ca09a;
+  
+}
+
+.bio-head {
+  width: auto;
+  height: auto;
+  font-family: OpenSans;
+  font-size: 36px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--blue-green);
+  color: #0ca09a;
+}
+
+.bio {
+  width: auto;
+  height: auto;
+  font-family: OpenSans;
+  font-size: 24px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #051d54;
+}
+
+.travel-pref {
+  width: auto;
+  height: auto;
+  font-family: OpenSans;
+  font-size: 36px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #0ca09a;
+}
+
+.recentReview {
+  width: auto;
+  height: auto;
+  font-family: OpenSans;
+  font-size: 36px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #0ca09a;
+}
+
+.profile-details {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  align-content: stretch;
+  margin-left: 75px;
+}
+
+.name-pic {
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-align-self: flex-end;
+  -ms-flex-item-align: end;
+  align-self: flex-end;
+  width: 378px;
+  height: 170px;
+  font-family: OpenSans;
+  font-size: 24px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #051d54;
+  align-content: center;
+}
+
+.profile-details-image{
+  width: 200px;
+  height: 200px;
+  border: solid 3px #051d54;
+  border-radius: 50%;
+}

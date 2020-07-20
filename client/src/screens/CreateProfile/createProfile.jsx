@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { createProfile } from "../../services/profile";
 import "./createProfile.css";
 import {Redirect} from 'react-router-dom'
+import Layout from "../../components/shared/Layout/Layout"
 
 
 class CreateProfile extends Component {
@@ -29,19 +30,23 @@ class CreateProfile extends Component {
   };
 
   handleSubmit = async (event) => {
-    event.preventDefualt()
     const {password, confirmPassword} = this.state.profile
     console.log(password)
     if(confirmPassword !== password){
+       event.preventDefault()
       alert("Passwords do not match. Try Again")
       console.log("password incorrect")
     }
     else{
+       event.preventDefault()
       const created = await createProfile(this.state.profile)
       this.setState ({
-      created:true
+      created
      })
+     alert("Created")
+     console.log(created)
     }
+
 
 
   }
@@ -50,20 +55,20 @@ class CreateProfile extends Component {
     const { profile, created } = this.state;
 
     if(created) { 
-      return <Redirect to={`/profiles`} />
+      return <Redirect to={`/Home`} />
 
     }
 
 
     return (
-      //<Layout>
-      <>
-        <h1>CREATE USER PAGE</h1>
-        <form>
+      <Layout>
+      <div className = 'create-user-container'>
+        <h1 className= "heading">Create an Account</h1>
+        <form onSubmit={this.handleSubmit}>
           <input
             type='text'
             placeholder="Email Address"
-            className="user-email"
+            className="user-email input-field"
             value={profile.email}
             name="email"
             required
@@ -72,7 +77,7 @@ class CreateProfile extends Component {
           <input
             type='password'
             placeholder="Password"
-            className="user-password"
+            className="user-password input-field"
             value={profile.password}
             name="password"
             required
@@ -82,7 +87,7 @@ class CreateProfile extends Component {
           <input
             type='password'
             placeholder="Confirm Password"
-            className="user-password"
+            className="user-password input-field"
             value={profile.confirmPassword}
             name="confirmPassword"
             required
@@ -91,11 +96,10 @@ class CreateProfile extends Component {
 
         
            <button  type= "submit" className="create-profile-button"
-            onSubmit={this.handleSubmit}
-          >Submit</button>
+          >Create Account</button>
         </form>
-      </>
-      //</Layout>
+      </div>
+      </Layout>
     );
   }
 }
