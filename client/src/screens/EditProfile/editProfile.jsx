@@ -4,6 +4,8 @@ import CreateProfileButton from '../../components/EditProfile/Button/CreateProfi
 import { withRouter } from 'react-router-dom'
 import axios from 'axios'
 import './editProfile.css'
+import ProfilePic from '../../components/EditProfile/ProfilePic/ProfilePic'
+import PopUp from '../../components/EditProfile/PopUp/PopUp'
 import Main from '../../components/shared/Main/Main'
 import Heading from '../../components/EditProfile/Heading/Heading'
 import Header from '../../components/shared/Header/header'
@@ -64,11 +66,8 @@ class EditProfile extends Component {
         <Header />
         <Main>
           <Heading />
-          <div className='circle'>
-            <div className='head'></div>
-            <div className='shoulder'></div>
-            <div className='cameraC'></div>
-          </div>
+          <ProfilePic />
+          <PopUp />
           <form className='editForm' onSubmit={this.handleSubmit}>
             <div className='formC'>
               <div className='formItem'>
