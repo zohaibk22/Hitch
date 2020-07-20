@@ -19,7 +19,7 @@ function App() {
         <MyProfile />
       </Route>
 
-      <Route exact path="/profile/create">
+      <Route exact path="/profiles">
         <CreateProfile />
       </Route>
     </>

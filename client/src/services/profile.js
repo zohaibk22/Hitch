@@ -11,7 +11,7 @@ export const getProfile = async (id) => {
 
 export const createProfile = async (profile) => {
   try {
-    const response = await api.post("/profile/create", profile);
+    const response = await api.post("/profiles", profile);
     return response.data;
   } catch (error) {
     throw error;
@@ -34,5 +34,4 @@ export const deleteProfile = async (id) => {
   } catch (error) {
     throw error;
   }
-
 };

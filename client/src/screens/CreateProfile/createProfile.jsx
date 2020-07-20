@@ -30,7 +30,6 @@ class CreateProfile extends Component {
   };
 
   handleSubmit = async (event) => {
-    event.preventDefualt()
     const {password, confirmPassword} = this.state.profile
     console.log(password)
     if(confirmPassword !== password){
@@ -40,9 +39,13 @@ class CreateProfile extends Component {
     else{
       const created = await createProfile(this.state.profile)
       this.setState ({
-      created:true
+      created
      })
+     alert("Created")
+     console.log(created)
     }
+
+    event.preventDefualt()
 
 
   }
@@ -51,7 +54,7 @@ class CreateProfile extends Component {
     const { profile, created } = this.state;
 
     if(created) { 
-      return <Redirect to={`/profiles`} />
+      return <Redirect to={`/home`} />
 
     }
 
@@ -60,7 +63,7 @@ class CreateProfile extends Component {
       <Layout>
       <>
         <h1>CREATE USER PAGE</h1>
-        <form>
+        <form onSubmit={this.handleSubmit}>
           <input
             type='text'
             placeholder="Email Address"
@@ -92,8 +95,7 @@ class CreateProfile extends Component {
 
         
            <button  type= "submit" className="create-profile-button"
-            onSubmit={this.handleSubmit}
-          >Submit</button>
+          >Sign In</button>
         </form>
       </>
       </Layout>
