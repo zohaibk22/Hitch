@@ -2,6 +2,9 @@ import React, { Component } from 'react'
 import './myProfile.css'
 import { withRouter } from 'react-router-dom'
 import axios from 'axios'
+import Main from '../../components/shared/Main/Main'
+import Header from '../../components/shared/Header/header'
+import Footer from '../../components/shared/Footer/footer'
 
 
 class MyProfile extends Component {
@@ -18,6 +21,7 @@ class MyProfile extends Component {
         age: '',
         recentReview: '',
         homeTown: '',
+        active: true,
 
       }
     }
@@ -44,22 +48,32 @@ class MyProfile extends Component {
     const { profile } = this.state
     console.log(profile.bio)
     return (
-      
-        <div className="profile-details">
-          <img className="profile-details-image" src={profile.imgUrl} alt={profile.name} />
-          <div className="detail">
-            <div className="name">{profile.name}</div>
-            <div className="bio">{profile.bio}</div>
-            <div className="school">{profile.school}</div>
-            <div className="major">{profile.major}</div>
-            <div className="graduation">{profile.graduationYear}</div>
-            <div className="age">{profile.age}</div>
-            <div className="recentReview">{profile.recentReview}</div>
-            <div className="hometown">{profile.homeTown}</div>
-        
-          </div>
+      <>
+      <Header />
+        <Main>
+          <div className="profile-details">
+            <h1 className="my-profile">My Profile</h1>
+         
+            <div className="detail">
+              <img className="profile-details-image" src={profile.imgUrl} alt={profile.name} />
+              <div className="name">{profile.fullname}</div>
+              <div className="age">Age{profile.age}</div>
+              <div className="hometown">Hometown:{profile.homeTown}</div>
+            </div>
+            
+
+            <div className="school">School:{profile.school}</div>
+            <div className="major">Major:{profile.major}</div>
+            <div className="graduation">Graduation:{profile.graduationYear}</div>
+            <h2 className="bio">Bio{profile.bio}</h2> 
+            <h2 className="recentReview">Most Recent Review{profile.recentReview}</h2>
+            <h2 className="travel-pref">Travel Preferences</h2>
+            
+            
         </div>
-      
+      </Main>
+        <Footer />
+        </>
     )
   }
 }
