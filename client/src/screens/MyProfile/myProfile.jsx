@@ -31,10 +31,14 @@ class MyProfile extends Component {
     //debugger
     let { id } = this.props.match.params
     //debugger
-    const profile = await getProfile(id)
+    const res = await getProfile(id)
     //debugger
-    // console.log(strr);
+    console.log(res.data)
+    debugger
+    const profile = res;
     this.setState({ profile })
+    console.log(this.state)
+    debugger
   }
 
 
@@ -59,8 +63,8 @@ class MyProfile extends Component {
             <h1 className="my-profile">My Profile</h1>
          
             <div className="detail">
-              <img className="profile-details-image" src={profile.imgUrl} alt={profile.name} />
-              <div className="name">{profile.fullname}</div>
+              <img className="profile-details-image" src={profile.imgUrl} alt={profile.fullName} />
+              <div className="name">{profile.fullName}</div>
               <div className="age">Age{profile.age}</div>
               <div className="hometown">Hometown:{profile.homeTown}</div>
             </div>
