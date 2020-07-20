@@ -33,10 +33,12 @@ class CreateProfile extends Component {
     const {password, confirmPassword} = this.state.profile
     console.log(password)
     if(confirmPassword !== password){
+       event.preventDefault()
       alert("Passwords do not match. Try Again")
       console.log("password incorrect")
     }
     else{
+       event.preventDefault()
       const created = await createProfile(this.state.profile)
       this.setState ({
       created
@@ -45,7 +47,6 @@ class CreateProfile extends Component {
      console.log(created)
     }
 
-    event.preventDefualt()
 
 
   }
