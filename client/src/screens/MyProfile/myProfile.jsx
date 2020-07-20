@@ -33,7 +33,7 @@ class MyProfile extends Component {
     //debugger
     const profile = await getProfile(id)
     //debugger
-    console.log(profile)
+    // console.log(strr);
     this.setState({ profile })
   }
 

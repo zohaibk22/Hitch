@@ -1,17 +1,30 @@
 import api from "./apiConfig";
+import Axios from "axios";
+
+// export const getProfile = async (id) => {
+//   try {
+//     debugger
+//     const response = await api.get(`/profile/${id}`);
+//     debugger
+//     console.log(response)
+//     return response.data;
+//   } catch (error) {
+//     console.log(error)
+//     throw error;
+//   }
+// };
 
 export const getProfile = async (id) => {
-  try {
+  var strr = [];
+  api('/profile/' + id).then(function (response) {
+    strr.push(response.data);
+    console.log(strr);
     debugger
-    const response = await api.get(`https://hitch-account-info.herokuapp.com/api/profile/${id}`);
-    debugger
-    console.log(response)
-    return response.data;
-  } catch (error) {
-    console.log(error)
-    throw error;
-  }
-};
+  }).catch(function (error) {
+    console.log(error);
+  });
+  return strr;
+}
 
 export const createProfile = async (profile) => {
   try {
