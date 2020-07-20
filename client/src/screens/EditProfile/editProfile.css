@@ -55,9 +55,9 @@ textarea {
   color: #051d54;
   resize: none;
 }
+
 textarea:focus {
   border-color: rgb(243, 111, 58);
   outline: none
 }
-
 

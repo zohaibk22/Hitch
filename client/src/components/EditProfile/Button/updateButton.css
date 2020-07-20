@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700');
+
+button {
+  width: 475px;
+  height: 75px;
+  margin-left: 81px;
+  border-radius: 15px;
+  border: none;
+  background-color: rgb(243, 111, 58);
+  font-family: 'Open Sans', sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+  margin-top: 50px;
+}
