@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { createProfile } from "../../services/profile";
 import "./createProfile.css";
 import {Redirect} from 'react-router-dom'
+import Layout from "../../components/shared/Layout/Layout"
 
 
 class CreateProfile extends Component {
@@ -56,7 +57,7 @@ class CreateProfile extends Component {
 
 
     return (
-      //<Layout>
+      <Layout>
       <>
         <h1>CREATE USER PAGE</h1>
         <form>
@@ -95,7 +96,7 @@ class CreateProfile extends Component {
           >Submit</button>
         </form>
       </>
-      //</Layout>
+      </Layout>
     );
   }
 }
