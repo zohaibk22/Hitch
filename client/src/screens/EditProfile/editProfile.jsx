@@ -5,6 +5,7 @@ import { withRouter } from 'react-router-dom'
 import axios from 'axios'
 import './editProfile.css'
 import ProfilePic from '../../components/EditProfile/ProfilePic/ProfilePic'
+import PopUp from '../../components/EditProfile/PopUp/PopUp'
 import Main from '../../components/shared/Main/Main'
 import Heading from '../../components/EditProfile/Heading/Heading'
 import Header from '../../components/shared/Header/header'
@@ -66,6 +67,7 @@ class EditProfile extends Component {
         <Main>
           <Heading />
           <ProfilePic />
+          <PopUp />
           <form className='editForm' onSubmit={this.handleSubmit}>
             <div className='formC'>
               <div className='formItem'>

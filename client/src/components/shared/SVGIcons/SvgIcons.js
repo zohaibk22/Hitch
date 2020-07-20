@@ -11,6 +11,8 @@ const getViewBox = name => {
   switch (name) {
     case 'camera':
       return "0 0 20 17";
+    case 'close':
+      return "0 0 20 20";
     default:
       return "0 0 32 32";
   }
