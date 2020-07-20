@@ -1,6 +1,4 @@
-.my-profile{
-  width: 714px;
-  height: 95px;
+.my-profile {
   font-family: OpenSans;
   font-size: 64px;
   font-weight: bold;
@@ -8,12 +6,13 @@
   font-style: normal;
   line-height: normal;
   letter-spacing: normal;
-  color: #0ca09a
+  color: #0ca09a;
+  
 }
 
-.bio-head{
-  width: 786px;
-  height: 53px;
+.bio-head {
+  width: auto;
+  height: auto;
   font-family: OpenSans;
   font-size: 36px;
   font-weight: 600;
@@ -22,14 +21,25 @@
   line-height: normal;
   letter-spacing: normal;
   color: var(--blue-green);
-  color: #0ca09a
-  
-  
+  color: #0ca09a;
 }
 
-.travel-pref{
-  width: 786px;
-  height: 53px;
+.bio {
+  width: auto;
+  height: auto;
+  font-family: OpenSans;
+  font-size: 24px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #051d54;
+}
+
+.travel-pref {
+  width: auto;
+  height: auto;
   font-family: OpenSans;
   font-size: 36px;
   font-weight: 600;
@@ -37,12 +47,12 @@
   font-style: normal;
   line-height: normal;
   letter-spacing: normal;
-  color: #0ca09a
+  color: #0ca09a;
 }
 
-.recentReview{
-  width: 786px;
-  height: 53px;
+.recentReview {
+  width: auto;
+  height: auto;
   font-family: OpenSans;
   font-size: 36px;
   font-weight: 600;
@@ -50,13 +60,43 @@
   font-style: normal;
   line-height: normal;
   letter-spacing: normal;
-  color: #0ca09a
+  color: #0ca09a;
 }
 
-.profile-details{
+.profile-details {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
   align-items: flex-start;
-  width: 200px;
+  align-content: stretch;
+  margin-left: 75px;
+}
 
+.name-pic {
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-align-self: flex-end;
+  -ms-flex-item-align: end;
+  align-self: flex-end;
+  width: 378px;
+  height: 170px;
+  font-family: OpenSans;
+  font-size: 24px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #051d54;
+}
+
+
+h1{
+ display: flex;
+ align-items: flex-start;
 }

@@ -13,9 +13,9 @@ let apiUrls = {
 // } else {
 //   apiUrl = apiUrls.production;
 // }
-axios.defaults.baseURL = apiUrls.production;
+axios.defaults.baseURL = apiUrls.production
 const api = axios.create({
-  //baseUrl: apiUrls.production
+  //baseUrl: apiUrls.production,
 });
 
 // put back baseUrl: apiUrl after if else works
