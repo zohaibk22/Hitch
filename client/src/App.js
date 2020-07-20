@@ -8,7 +8,6 @@ import CreateProfile from "./screens/CreateProfile/createProfile";
 
 function App() {
   return (
-
     <>
       <Route exact path="/profile/update/:id">
         <EditProfile />
