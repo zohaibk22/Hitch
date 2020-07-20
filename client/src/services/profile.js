@@ -3,9 +3,9 @@ import Axios from "axios";
 
 export const getProfile = async (id) => {
   try {
-    debugger
-    const response = await Axios(`https://hitch-account-info.herokuapp.com/api/profile/${id}`);
-    debugger
+    //debugger
+    const response = await api.get(`/profile/${id}`);
+   // debugger
     console.log(response)
     return response.data;
   } catch (error) {

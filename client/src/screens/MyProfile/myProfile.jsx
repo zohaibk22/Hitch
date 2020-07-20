@@ -34,11 +34,11 @@ class MyProfile extends Component {
     const res = await getProfile(id)
     //debugger
     console.log(res.data)
-    debugger
+    //debugger
     const profile = res;
     this.setState({ profile })
     console.log(this.state)
-    debugger
+    //debugger
   }
 
 
@@ -61,11 +61,12 @@ class MyProfile extends Component {
         <Main>
           <div className="profile-details">
             <h1 className="my-profile">My Profile</h1>
-         
+            <h2 className="bio-head">Bio</h2>
+            <div className="bio">{profile.bio}</div> 
             <div className="detail">
               <img className="profile-details-image" src={profile.imgUrl} alt={profile.fullName} />
               <div className="name">{profile.fullName}</div>
-              <div className="age">Age{profile.age}</div>
+              <div className="age">Age: {profile.age}</div>
               <div className="hometown">Hometown:{profile.homeTown}</div>
             </div>
             
@@ -73,8 +74,9 @@ class MyProfile extends Component {
             <div className="school">School:{profile.school}</div>
             <div className="major">Major:{profile.major}</div>
             <div className="graduation">Graduation:{profile.graduationYear}</div>
-            <h2 className="bio">Bio{profile.bio}</h2> 
-            <h2 className="recentReview">Most Recent Review{profile.recentReview}</h2>
+            
+            <h2 className="recentReview">Most Recent Review</h2>
+            <div className="review-text">{profile.recentReview}</div>
             <h2 className="travel-pref">Travel Preferences</h2>
             
             
