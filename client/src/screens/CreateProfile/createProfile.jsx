@@ -55,7 +55,7 @@ class CreateProfile extends Component {
     const { profile, created } = this.state;
 
     if(created) { 
-      return <Redirect to={`/home`} />
+      return <Redirect to={`/Home`} />
 
     }
 
@@ -63,12 +63,12 @@ class CreateProfile extends Component {
     return (
       <Layout>
       <>
-        <h1>CREATE USER PAGE</h1>
+        <h1 className= "heading">Create an Account</h1>
         <form onSubmit={this.handleSubmit}>
           <input
             type='text'
             placeholder="Email Address"
-            className="user-email"
+            className="user-email input-field"
             value={profile.email}
             name="email"
             required
@@ -77,7 +77,7 @@ class CreateProfile extends Component {
           <input
             type='password'
             placeholder="Password"
-            className="user-password"
+            className="user-password input-field"
             value={profile.password}
             name="password"
             required
@@ -87,7 +87,7 @@ class CreateProfile extends Component {
           <input
             type='password'
             placeholder="Confirm Password"
-            className="user-password"
+            className="user-password input-field"
             value={profile.confirmPassword}
             name="confirmPassword"
             required
