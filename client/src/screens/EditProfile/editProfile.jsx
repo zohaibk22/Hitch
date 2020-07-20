@@ -64,6 +64,11 @@ class EditProfile extends Component {
         <Header />
         <Main>
           <Heading />
+          <div className='circle'>
+            <div className='head'></div>
+            <div className='shoulder'></div>
+            <div className='cameraC'></div>
+          </div>
           <form className='editForm' onSubmit={this.handleSubmit}>
             <div className='formC'>
               <div className='formItem'>
@@ -103,10 +108,8 @@ class EditProfile extends Component {
             </div>
             <div className='bio'>
               <label>Bio:</label>
-              {/* <div className='bioInputC'> */}
-                <textarea type='text' id='bio' name='bio' className='bioInput'
-                  defaultValue={profile.bio} onChange={this.handleChange}></textarea>
-              {/* </div> */}
+              <textarea type='text' id='bio' name='bio' className='bioInput'
+                defaultValue={profile.bio} onChange={this.handleChange}></textarea>
             </div>
             <CreateProfileButton />
           </form>
