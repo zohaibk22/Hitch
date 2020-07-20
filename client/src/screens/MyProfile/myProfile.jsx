@@ -60,7 +60,7 @@ class MyProfile extends Component {
       <Header />
         <Main>
           <div className="profile-details">
-            <h1 className="my-profile">My Profile</h1>
+            <h2 className="my-profile">My Profile</h2>
             <h2 className="bio-head">Bio</h2>
               <div className="bio">{profile.bio}</div> 
 

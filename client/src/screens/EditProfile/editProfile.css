@@ -76,3 +76,10 @@ textarea {
   color: #051d54;
   resize: none;
 }
+
+.Ellipse-11 {
+  width: 70px;
+  height: 70px;
+  border: solid 3px var(--marine);
+  background-color: #ffffff;
+}
