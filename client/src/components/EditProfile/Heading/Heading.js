@@ -3,6 +3,6 @@ import './Heading.css'
 
 export default function Heading(props) {
   return (
-    <h1>Let's get to know you</h1>
+    <h1 className='title'>Let's get to know you</h1>
   );
 }

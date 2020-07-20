@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 const Profile = new Schema(
   {
-    fullName: { type: String, required: true },
+    fullName: { type: String, required: false },
     email: { type: String, required: true },
     password: { type: String, required: true },
     profilePicture: { type: String, required: false },

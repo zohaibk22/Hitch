@@ -4,19 +4,20 @@ let apiUrl;
 
 let apiUrls = {
   production: "https://hitch-account-info.herokuapp.com/api",
-  development: "/api",
+  development: "http://localhost:3000/api",
 };
 //http://localhost:3000/api/profile/5f13521ac780a05e7dae77f0
 
-// if (window.location.hostname === "localhost") {
-//   apiUrl = apiUrls.development;
-// } else {
-//   apiUrl = apiUrls.production;
-// }
-axios.defaults.baseURL = apiUrls.production
+if (window.location.hostname === "localhost") {
+  apiUrl = apiUrls.development;
+} else {
+  apiUrl = apiUrls.production;
+}
 const api = axios.create({
-  //baseUrl: apiUrls.production,
+  baseURL: apiUrl,
 });
+console.log(apiUrl);
+console.log(api.baseUrl);
 
 // put back baseUrl: apiUrl after if else works
 

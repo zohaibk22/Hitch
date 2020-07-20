@@ -4,6 +4,8 @@ import CreateProfileButton from '../../components/EditProfile/Button/CreateProfi
 import { withRouter } from 'react-router-dom'
 import axios from 'axios'
 import './editProfile.css'
+import ProfilePic from '../../components/EditProfile/ProfilePic/ProfilePic'
+import PopUp from '../../components/EditProfile/PopUp/PopUp'
 import Main from '../../components/shared/Main/Main'
 import Heading from '../../components/EditProfile/Heading/Heading'
 import Header from '../../components/shared/Header/header'
@@ -64,61 +66,49 @@ class EditProfile extends Component {
         <Header />
         <Main>
           <Heading />
+          <ProfilePic />
+          <PopUp />
           <form className='editForm' onSubmit={this.handleSubmit}>
             <div className='formC'>
               <div className='formItem'>
                 <label>Full Name:</label>
-                <div className='inputC'>
-                  <input type='text' id='fullName' name='fullName'
-                    value={profile.fullName} onChange={this.handleChange}></input>
-                </div>
+                <input type='text' id='fullName' name='fullName'
+                  value={profile.fullName} onChange={this.handleChange}></input>
               </div>
               <div className='formItem'>
                 <label>Hometown:</label>
-                <div className='inputC'>
-                  <input type='text' id='hometown' name='hometown'
-                    defaultValue={profile.hometown} onChange={this.handleChange}></input>
-                </div>
+                <input type='text' id='hometown' name='hometown'
+                  defaultValue={profile.hometown} onChange={this.handleChange}></input>
               </div>
             </div>
             <div className='formC'>
               <div className='formItem'>
                 <label>School:</label>
-                <div className='inputC'>
-                  <input type='text' id='school' name='school'
-                    defaultValue={profile.school} onChange={this.handleChange}></input>
-                </div>
+                <input type='text' id='school' name='school'
+                  defaultValue={profile.school} onChange={this.handleChange}></input>
               </div>
               <div className='formItem'>
                 <label>Major:</label>
-                <div className='inputC'>
-                  <input type='text' id='major' name='major'
-                    defaultValue={profile.major} onChange={this.handleChange}></input>
-                </div>
+                <input type='text' id='major' name='major'
+                  defaultValue={profile.major} onChange={this.handleChange}></input>
               </div>
             </div>
             <div className='formC'>
               <div className='formItem'>
                 <label>Graduation Year:</label>
-                <div className='inputC'>
-                  <input type='text' id='gradYear' name='gradYear'
-                    defaultValue={profile.graduationYear} onChange={this.handleChange}></input>
-                </div>
+                <input type='text' id='gradYear' name='gradYear'
+                  defaultValue={profile.graduationYear} onChange={this.handleChange}></input>
               </div>
               <div className='formItem'>
                 <label>Age:</label>
-                <div className='inputC'>
-                  <input type='text' id='age' name='age'
-                    defaultValue={profile.age} onChange={this.handleChange}></input>
-                </div>
+                <input type='text' id='age' name='age'
+                  defaultValue={profile.age} onChange={this.handleChange}></input>
               </div>
             </div>
             <div className='bio'>
               <label>Bio:</label>
-              <div className='bioInputC'>
-                <textarea type='text' id='bio' name='bio' className='bioInput'
-                  defaultValue={profile.bio} onChange={this.handleChange}></textarea>
-              </div>
+              <textarea type='text' id='bio' name='bio' className='bioInput'
+                defaultValue={profile.bio} onChange={this.handleChange}></textarea>
             </div>
             <CreateProfileButton />
           </form>
