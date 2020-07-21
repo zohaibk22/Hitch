@@ -1,5 +1,17 @@
-.my-profile {
-  font-family: OpenSans;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700');
+
+
+.profile-details {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+  font-family: 'Open Sans', sans-serif;
+  max-width: 1000px;
+}
+  .my-profile {
+  font-family: 'Open Sans', sans-serif;
   font-size: 64px;
   font-weight: bold;
   font-stretch: normal;
@@ -8,12 +20,13 @@
   letter-spacing: normal;
   color: #0ca09a;
   
+  
 }
 
 .bio-head {
   width: auto;
   height: auto;
-  font-family: OpenSans;
+  font-family: 'Open Sans', sans-serif;
   font-size: 36px;
   font-weight: 600;
   font-stretch: normal;
@@ -24,10 +37,9 @@
   color: #0ca09a;
 }
 
-.bio {
-  width: auto;
-  height: auto;
-  font-family: OpenSans;
+.profile-bio {
+  height: 108px;
+  font-family: 'Open Sans', sans-serif;
   font-size: 24px;
   font-weight: normal;
   font-stretch: normal;
@@ -38,9 +50,8 @@
 }
 
 .travel-pref {
-  width: auto;
-  height: auto;
-  font-family: OpenSans;
+  height: 53px;
+  font-family: 'Open Sans', sans-serif;
   font-size: 36px;
   font-weight: 600;
   font-stretch: normal;
@@ -51,9 +62,8 @@
 }
 
 .recentReview {
-  width: auto;
-  height: auto;
-  font-family: OpenSans;
+  height: 71px;
+  font-family: 'Open Sans', sans-serif;
   font-size: 36px;
   font-weight: 600;
   font-stretch: normal;
@@ -63,29 +73,37 @@
   color: #0ca09a;
 }
 
-.profile-details {
+
+.profile-container {
+ display: flex;
+ flex-direction: row;
+ flex-wrap: wrap-reverse;
+ justify-content: space-between;
+ max-width: 1000px;
+
+}
+.left-profile{
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+align-items: flex-start;
+max-width: 700px;
+}
+.right-profile{
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: flex-start;
-  align-content: stretch;
-  margin-left: 75px;
+  /* justify-content: flex-end; */
+  align-items: center;
+  min-height: 600px;
+  max-width: 300px;
 }
 
 .name-pic {
-  -webkit-order: 0;
-  -ms-flex-order: 0;
   order: 0;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
   flex: 0 1 auto;
-  -webkit-align-self: flex-end;
-  -ms-flex-item-align: end;
   align-self: flex-end;
-  width: 378px;
   height: 170px;
-  font-family: OpenSans;
+  font-family: 'Open Sans', sans-serif;
   font-size: 24px;
   font-weight: normal;
   font-stretch: normal;
@@ -94,11 +112,64 @@
   letter-spacing: normal;
   color: #051d54;
   align-content: center;
+  
 }
 
 .profile-details-image{
+  display: flex;
+  align-self: flex-end;
   width: 200px;
   height: 200px;
   border: solid 3px #051d54;
   border-radius: 50%;
+  margin-bottom: 20px;
+
+}
+
+.CreateProfileButton{
+  width: 475px;
+  height: 41.3px;
+  font-family: OpenSans;
+  font-size: 24px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+}
+
+.remove-account{
+  width: 355px;
+  height: 40px;
+  font-family: OpenSans;
+  font-size: 24px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #051d54;
+  text-align: center;
+}
+
+.remove-button{
+  width: 355px;
+  height: 40px;
+  font-family: OpenSans;
+  font-size: 24px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ea6e2d;
+  text-align: center;
+}
+
+.button-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
 }

@@ -1,12 +1,13 @@
 import React, { Component } from 'react'
 import './myProfile.css'
-import { withRouter } from 'react-router-dom'
+import { withRouter, Link } from 'react-router-dom'
 import axios from 'axios'
 import Main from '../../components/shared/Main/Main'
 import Header from '../../components/shared/Header/header'
 import Footer from '../../components/shared/Footer/footer'
-import { getProfile } from "../../services/profile"
-import CreateProfileButton from '../../components/EditProfile/Button/updateButton'
+import { getProfile, updateProfile } from "../../services/profile"
+import UpdateProfileButton from '../../components/MyProfile/Button/updateButton'
+import DeactivatePopUp from '../../components/MyProfile/DeactivatePopUp/DeactivatePopUp'
 class MyProfile extends Component {
   constructor(props) {
     super(props) 
@@ -57,35 +58,46 @@ class MyProfile extends Component {
     console.log(profile.bio)
     return (
       <>
-      <Header />
+        <Header />
         <Main>
           <div className="profile-details">
-            <h2 className="my-profile">My Profile</h2>
-            <h2 className="bio-head">Bio</h2>
-              <div className="bio">{profile.bio}</div> 
-
-               <div className="name-pic">
-                  <img className="profile-details-image" src={profile.imgUrl} alt={profile.fullName} />
-                  <div className="name">{profile.fullName}</div>
-                  <div className="age">Age: {profile.age}</div>
-                  <div className="hometown">Hometown:{profile.homeTown}</div>
-            
-            
-
-                 <div className="school">School:{profile.school}</div>
-                 <div className="major">Major:{profile.major}</div>
-                  <div className="graduation">Graduation:{profile.graduationYear}</div>
+          <h2 className="my-profile">My Profile</h2>
+            <div class="profile-container">
+              <div className="left-profile">
+               
+                <h2 className="bio-head">Bio</h2>
+                <div className="profile-bio">{profile.bio}</div>
+                <h2 className="recentReview">Most Recent Review</h2>
+                <div className="review-text">"{profile.recentReview}"</div>
+                <h2 className="travel-pref">Travel Preferences</h2>
+                <div className="button-container">
+                  <UpdateProfileButton />
+                  <h2 className="remove-account">Want to remove your account?</h2>
+                  <Link to="/profile/:id"className="remove-button">Deactivate Account</Link>
                 </div>
+              </div>
 
-              <h2 className="recentReview">Most Recent Review</h2>
-              <div className="review-text">"{profile.recentReview}"</div>
-              <h2 className="travel-pref">Travel Preferences</h2>
+              <div className="right-profile">
+                <img className="profile-details-image" src={profile.imgUrl} alt={profile.fullName} />
+                <div className="name-pic">
+                  <div className="name">{profile.fullName}</div>
+                  <div className="age">{profile.age}</div>
+                  <div className="hometown">{profile.homeTown}</div>
+                  <div className="school">{profile.school}</div>
+                  <div className="major">{profile.major}</div><div className="graduation">{profile.graduationYear}</div>
+                </div>
+              </div>
+            </div>
+            
+              
+
+              
             
             
           </div>
+
+          
         </Main>
-        <CreateProfileButton />
-        
         <Footer />
         </>
     )
