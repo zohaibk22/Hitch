@@ -18,8 +18,8 @@ class CreateProfile extends Component {
       },
       created: false,
       errors: {
-        email: true,
-        password: true,
+        email: null,
+        password: null,
       },
       emailValid: false,
       passwordValid: false,
@@ -33,12 +33,14 @@ class CreateProfile extends Component {
     switch(name) {
       case 'email':
         emailValid = value.match(/^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i);
-        errors.email = emailValid ? true : false;
+        // errors.email = emailValid ? true : false;
+        errors.email = emailValid ? '' :"is invalid"
         break;
 
       case 'password':
         passwordValid = value.length >= 8;
-        errors.password = passwordValid ? null : false
+        // errors.password = passwordValid ? true : false
+        errors.password = passwordValid ? '' : "is too short"
 
         if(profile.password !== profile.confirmPassword){
          profile.match = false;
@@ -58,10 +60,16 @@ class CreateProfile extends Component {
       errors: errors,
       emailValid: emailValid,
       passwordValid: passwordValid,
-    })
+    }, this.formValidation)
     
 
     
+  }
+
+  formValidation() {
+    this.setState({
+      formValid: this.state.emailValid && this.state.passwordValid
+    })
   }
 
 
@@ -149,7 +157,7 @@ class CreateProfile extends Component {
 
 
         
-           <button  type= "submit" className="create-profile-button"
+           <button  type= "submit" className="create-profile-button" disabled={!this.state.formValid}
           >Create Account</button>
         </form>
       </div>
