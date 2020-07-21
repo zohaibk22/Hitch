@@ -1,8 +1,8 @@
 import React from 'react';
-import './CreateProfile.css'
+import './updateButton.css'
 
-export default function CreateProfileButton(props) {
+export default function UpdateProfileButton(props) {
   return (
-    <button type='submit'>Update Profile</button>
+    <button className="update-button"type='submit'>Update Profile</button>
   );
 }

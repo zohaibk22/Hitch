@@ -10,7 +10,7 @@ function Header(props) {
         <li className='one'>Find My Ride</li>
         <li className='two'>About Us</li>
         <li className='three'>Contact Us</li>
-        <a href="/profile/id"><li className='four'>My Account</li></a>
+        <a className="link" a href="/profile/id"><li className='four'>My Account</li></a>
         <li className='five'>Sign in</li>
       </ul>
     </header>

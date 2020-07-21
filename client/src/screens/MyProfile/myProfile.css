@@ -1,6 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700');
 
-.my-profile {
+
+.profile-details {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+  font-family: 'Open Sans', sans-serif;
+  max-width: 1000px;
+}
+  .my-profile {
   font-family: 'Open Sans', sans-serif;
   font-size: 64px;
   font-weight: bold;
@@ -9,6 +19,7 @@
   line-height: normal;
   letter-spacing: normal;
   color: #0ca09a;
+  
   
 }
 
@@ -26,8 +37,7 @@
   color: #0ca09a;
 }
 
-.bio {
-  width: 786px;
+.profile-bio {
   height: 108px;
   font-family: 'Open Sans', sans-serif;
   font-size: 24px;
@@ -40,7 +50,6 @@
 }
 
 .travel-pref {
-  width: 786px;
   height: 53px;
   font-family: 'Open Sans', sans-serif;
   font-size: 36px;
@@ -53,7 +62,6 @@
 }
 
 .recentReview {
-  width: 786px;
   height: 71px;
   font-family: 'Open Sans', sans-serif;
   font-size: 36px;
@@ -65,22 +73,35 @@
   color: #0ca09a;
 }
 
-.profile-details {
+
+.profile-container {
+ display: flex;
+ flex-direction: row;
+ flex-wrap: wrap-reverse;
+ justify-content: space-between;
+ max-width: 1000px;
+
+}
+.left-profile{
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+align-items: flex-start;
+max-width: 700px;
+}
+.right-profile{
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  align-items: flex-start;
-  align-content: stretch;
-  margin-left: 75px;
-  font-family: 'Open Sans', sans-serif;
+  /* justify-content: flex-end; */
+  align-items: center;
+  min-height: 600px;
+  max-width: 300px;
 }
 
 .name-pic {
   order: 0;
   flex: 0 1 auto;
   align-self: flex-end;
-  width: 378px;
   height: 170px;
   font-family: 'Open Sans', sans-serif;
   font-size: 24px;
@@ -101,7 +122,6 @@
   height: 200px;
   border: solid 3px #051d54;
   border-radius: 50%;
-  margin-right: 200px;
   margin-bottom: 20px;
 
 }
@@ -130,8 +150,7 @@
   line-height: normal;
   letter-spacing: normal;
   color: #051d54;
-  padding-left: 146px;
-  padding-top: 92px;
+  text-align: center;
 }
 
 .remove-button{
@@ -145,6 +164,12 @@
   line-height: normal;
   letter-spacing: normal;
   color: #ea6e2d;
-  padding-left: 144px;
-  align-content: center;
+  text-align: center;
+}
+
+.button-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
 }
