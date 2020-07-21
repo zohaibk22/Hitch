@@ -1,12 +1,13 @@
 import React, { Component } from 'react'
 import './myProfile.css'
-import { withRouter } from 'react-router-dom'
+import { withRouter, Link } from 'react-router-dom'
 import axios from 'axios'
 import Main from '../../components/shared/Main/Main'
 import Header from '../../components/shared/Header/header'
 import Footer from '../../components/shared/Footer/footer'
 import { getProfile, updateProfile } from "../../services/profile"
-import UpdateProfileButton from '../../components/EditProfile/Button/updateButton'
+import UpdateProfileButton from '../../components/MyProfile/Button/updateButton'
+import DeactivatePopUp from '../../components/MyProfile/DeactivatePopUp/DeactivatePopUp'
 class MyProfile extends Component {
   constructor(props) {
     super(props) 
@@ -57,7 +58,7 @@ class MyProfile extends Component {
     console.log(profile.bio)
     return (
       <>
-      <Header />
+        <Header />
         <Main>
           <div className="profile-details">
           <h2 className="my-profile">My Profile</h2>
@@ -72,7 +73,7 @@ class MyProfile extends Component {
                 <div className="button-container">
                   <UpdateProfileButton />
                   <h2 className="remove-account">Want to remove your account?</h2>
-                  <h2 a href="/" className="remove-button">Deactivate Account</h2>
+                  <Link to="/profile/:id"className="remove-button">Deactivate Account</Link>
                 </div>
               </div>
 
