@@ -13,7 +13,7 @@ function App() {
         <EditProfile />
       </Route>
 
-      <Route exact path="/Home">
+      <Route exact path="/">
         <Home />
       </Route>
 <<<<<<< HEAD

@@ -14,10 +14,64 @@ class CreateProfile extends Component {
         email: "",
         password: "",
         confirmPassword: "",
+        match: true,
       },
       created: false,
+      errors: {
+        email: null,
+        password: null,
+      },
+      emailValid: false,
+      passwordValid: false,
+      formValid: false,
     };
   }
+
+  validation = (name, value) => {
+    let {emailValid, passwordValid, formValid, errors, profile} = this.state;
+
+    switch(name) {
+      case 'email':
+        emailValid = value.match(/^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i);
+        // errors.email = emailValid ? true : false;
+        errors.email = emailValid ? '' :"is invalid"
+        break;
+
+      case 'password':
+        passwordValid = value.length >= 8;
+        // errors.password = passwordValid ? true : false
+        errors.password = passwordValid ? '' : "is too short"
+
+        if(profile.password !== profile.confirmPassword){
+         profile.match = false;
+         console.log(profile.match);
+        }
+        else {
+          profile.match = true;
+        }
+        break;
+      
+      default :
+        break;
+      
+    }
+
+    this.setState({
+      errors: errors,
+      emailValid: emailValid,
+      passwordValid: passwordValid,
+    }, this.formValidation)
+    
+
+    
+  }
+
+  formValidation() {
+    this.setState({
+      formValid: this.state.emailValid && this.state.passwordValid
+    })
+  }
+
 
   handleChange = (event) => {
     const { name, value } = event.target;
@@ -26,8 +80,10 @@ class CreateProfile extends Component {
         ...this.state.profile,
         [name]: value,
       },
-    });
+    }, () => {this.validation(name, value)});
   };
+
+
 
   handleSubmit = async (event) => {
     const {password, confirmPassword} = this.state.profile
@@ -43,8 +99,6 @@ class CreateProfile extends Component {
       this.setState ({
       created
      })
-     alert("Created")
-     console.log(created)
     }
 
 
@@ -55,7 +109,7 @@ class CreateProfile extends Component {
     const { profile, created } = this.state;
 
     if(created) { 
-      return <Redirect to={`/Home`} />
+      return <Redirect to={`/`} />
 
     }
 
@@ -64,29 +118,33 @@ class CreateProfile extends Component {
       <Layout>
       <div className = 'create-user-container'>
         <h1 className= "heading">Create an Account</h1>
-        <form onSubmit={this.handleSubmit}>
+        <form className="create-user-account" onSubmit={this.handleSubmit}>
+          <label>Email Address</label>
           <input
             type='text'
-            placeholder="Email Address"
             className="user-email input-field"
             value={profile.email}
             name="email"
             required
             onChange={this.handleChange}
           />
+          {this.state.errors.email ? null : <p className="error-message">Incorrect Email input</p>}
+
+          <label>Password</label>
           <input
             type='password'
-            placeholder="Password"
             className="user-password input-field"
             value={profile.password}
             name="password"
             required
             onChange={this.handleChange}
           />
-
+          {this.state.errors.password ? null : <p className = "error-message" >Password Must be Over 8 characters</p>}
+          
+          
+          <label>Confirm Password</label>
           <input
             type='password'
-            placeholder="Confirm Password"
             className="user-password input-field"
             value={profile.confirmPassword}
             name="confirmPassword"
@@ -94,8 +152,12 @@ class CreateProfile extends Component {
             onChange={this.handleChange}
           />
 
+          {this.state.profile.match ? null : <p className = "error-message">Paswwords do not match</p>}
+
+
+
         
-           <button  type= "submit" className="create-profile-button"
+           <button  type= "submit" className="create-profile-button" disabled={!this.state.formValid}
           >Create Account</button>
         </form>
       </div>

@@ -1,3 +1,17 @@
+.create-user-container {
+  position: relative;
+    border-right: 40px solid #ddf3f5;
+    border-left: 40px solid #ddf3f5;
+     height: 75vh;
+}
+
+.create-user-account {
+  position: absolute;
+  left: 5vh;
+}
+
+
+
 .create-profile-button{
   width: 475px;
   height: 75px;
@@ -31,3 +45,11 @@ input{
 
 }
 
+.input-field:focus {
+  border-color: #e96e2d;
+}
+
+.error-message {
+  color: red;
+
+}

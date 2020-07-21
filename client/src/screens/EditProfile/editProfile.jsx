@@ -27,6 +27,7 @@ class EditProfile extends Component {
         hometown: '',
         active: true,
       },
+      picStatus: true,
     }
   }
   // async componentDidMount() {
@@ -39,35 +40,43 @@ class EditProfile extends Component {
   async componentDidMount() {
     let { id } = this.props.match.params
     const res = await axios(`https://hitch-account-info.herokuapp.com/api/profile/${id}`)
-    console.log(res.data)
     const profile = res.data
     this.setState({ profile })
   }
   handleChange = (event) => {
-    const { name, value } = event.target
+    const { value } = event.target
     this.setState({
-      profile: {
-        ...this.state.profile,
-        [name]: value
-      }
+      profilePicture: value
     })
   }
   handleSubmit = async (event) => {
     event.preventDefault()
-    let { id } = this.props.match.params
-    const profile = await axios.put(`https://hitch-account-info.herokuapp.com/api/profile/${id}`, this.state.profile)
-    console.log(profile)
+    const { profile } = this.state
+    if (profile.profilePicture === false || profile.profilePicture === 'test.png') {
+      this.setState({
+        picStatus: false
+      })
+    } else {
+      let { id } = this.props.match.params
+      const profile = await axios.put(`https://hitch-account-info.herokuapp.com/api/profile/${id}`, this.state.profile)
+      console.log(profile)
+    }
+  }
+  handleWillDo = () => {
+    this.setState({
+      picStatus: true
+    })
   }
   render() {
     const { profile } = this.state
-    console.log(profile.fullName)
+    console.log(profile)
     return (
       <>
         <Header />
         <Main>
           <Heading />
           <ProfilePic />
-          <PopUp />
+          {this.state.picStatus ? null : <PopUp onSubmit={this.handleWillDo} />}
           <form className='editForm' onSubmit={this.handleSubmit}>
             <div className='formC'>
               <div className='formItem'>
