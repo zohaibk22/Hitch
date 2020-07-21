@@ -43,8 +43,6 @@ class CreateProfile extends Component {
       this.setState ({
       created
      })
-     alert("Created")
-     console.log(created)
     }
 
 
@@ -55,7 +53,7 @@ class CreateProfile extends Component {
     const { profile, created } = this.state;
 
     if(created) { 
-      return <Redirect to={`/Home`} />
+      return <Redirect to={`/`} />
 
     }
 
@@ -64,29 +62,29 @@ class CreateProfile extends Component {
       <Layout>
       <div className = 'create-user-container'>
         <h1 className= "heading">Create an Account</h1>
-        <form onSubmit={this.handleSubmit}>
+        <form className="create-user-account" onSubmit={this.handleSubmit}>
+          <label>Email Address</label>
           <input
             type='text'
-            placeholder="Email Address"
             className="user-email input-field"
             value={profile.email}
             name="email"
             required
             onChange={this.handleChange}
           />
+
+          <label>Password</label>
           <input
             type='password'
-            placeholder="Password"
             className="user-password input-field"
             value={profile.password}
             name="password"
             required
             onChange={this.handleChange}
           />
-
+          <label>Confirm Password</label>
           <input
             type='password'
-            placeholder="Confirm Password"
             className="user-password input-field"
             value={profile.confirmPassword}
             name="confirmPassword"
