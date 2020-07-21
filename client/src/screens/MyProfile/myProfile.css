@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700');
+
 .my-profile {
-  font-family: OpenSans;
+  font-family: 'Open Sans', sans-serif;
   font-size: 64px;
   font-weight: bold;
   font-stretch: normal;
@@ -13,7 +15,7 @@
 .bio-head {
   width: auto;
   height: auto;
-  font-family: OpenSans;
+  font-family: 'Open Sans', sans-serif;
   font-size: 36px;
   font-weight: 600;
   font-stretch: normal;
@@ -25,9 +27,9 @@
 }
 
 .bio {
-  width: auto;
-  height: auto;
-  font-family: OpenSans;
+  width: 786px;
+  height: 108px;
+  font-family: 'Open Sans', sans-serif;
   font-size: 24px;
   font-weight: normal;
   font-stretch: normal;
@@ -38,9 +40,9 @@
 }
 
 .travel-pref {
-  width: auto;
-  height: auto;
-  font-family: OpenSans;
+  width: 786px;
+  height: 53px;
+  font-family: 'Open Sans', sans-serif;
   font-size: 36px;
   font-weight: 600;
   font-stretch: normal;
@@ -51,9 +53,9 @@
 }
 
 .recentReview {
-  width: auto;
-  height: auto;
-  font-family: OpenSans;
+  width: 786px;
+  height: 71px;
+  font-family: 'Open Sans', sans-serif;
   font-size: 36px;
   font-weight: 600;
   font-stretch: normal;
@@ -67,25 +69,20 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: flex-start;
   align-content: stretch;
   margin-left: 75px;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .name-pic {
-  -webkit-order: 0;
-  -ms-flex-order: 0;
   order: 0;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
   flex: 0 1 auto;
-  -webkit-align-self: flex-end;
-  -ms-flex-item-align: end;
   align-self: flex-end;
   width: 378px;
   height: 170px;
-  font-family: OpenSans;
+  font-family: 'Open Sans', sans-serif;
   font-size: 24px;
   font-weight: normal;
   font-stretch: normal;
@@ -94,11 +91,60 @@
   letter-spacing: normal;
   color: #051d54;
   align-content: center;
+  
 }
 
 .profile-details-image{
+  display: flex;
+  align-self: flex-end;
   width: 200px;
   height: 200px;
   border: solid 3px #051d54;
   border-radius: 50%;
+  margin-right: 200px;
+  margin-bottom: 20px;
+
+}
+
+.CreateProfileButton{
+  width: 475px;
+  height: 41.3px;
+  font-family: OpenSans;
+  font-size: 24px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+}
+
+.remove-account{
+  width: 355px;
+  height: 40px;
+  font-family: OpenSans;
+  font-size: 24px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #051d54;
+  padding-left: 146px;
+  padding-top: 92px;
+}
+
+.remove-button{
+  width: 355px;
+  height: 40px;
+  font-family: OpenSans;
+  font-size: 24px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ea6e2d;
+  padding-left: 144px;
+  align-content: center;
 }

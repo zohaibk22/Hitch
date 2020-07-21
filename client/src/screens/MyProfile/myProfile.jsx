@@ -63,19 +63,22 @@ class MyProfile extends Component {
             <h2 className="my-profile">My Profile</h2>
             <h2 className="bio-head">Bio</h2>
               <div className="bio">{profile.bio}</div> 
-
+            <img className="profile-details-image" src={profile.imgUrl} alt={profile.fullName} />
+            
                <div className="name-pic">
-                  <img className="profile-details-image" src={profile.imgUrl} alt={profile.fullName} />
+              
                   <div className="name">{profile.fullName}</div>
-                  <div className="age">Age: {profile.age}</div>
-                  <div className="hometown">Hometown:{profile.homeTown}</div>
+                  <div className="age">{profile.age}</div>
+                  <div className="hometown">{profile.homeTown}</div>
             
             
 
-                 <div className="school">School:{profile.school}</div>
-                 <div className="major">Major:{profile.major}</div>
-                  <div className="graduation">Graduation:{profile.graduationYear}</div>
-                </div>
+                 <div className="school">{profile.school}</div>
+                 <div className="major">{profile.major}</div><div className="graduation">{profile.graduationYear}</div>
+                  
+            </div>
+            
+              
 
               <h2 className="recentReview">Most Recent Review</h2>
               <div className="review-text">"{profile.recentReview}"</div>
@@ -83,9 +86,11 @@ class MyProfile extends Component {
             
             
           </div>
+
+          <CreateProfileButton />
+          <h2 className="remove-account">Want to remove your account?</h2>
+          <h2 a href="/" className="remove-button">Deactivate Account</h2>
         </Main>
-        <CreateProfileButton />
-        
         <Footer />
         </>
     )
