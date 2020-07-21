@@ -1,25 +1,43 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { withRouter } from 'react-router-dom'
+import EditProfile from '../../../screens/EditProfile/editProfile'
 import './PopUp.css'
 
-const styles = {
-  display: "flex",
-  flexWrap: "wrap",
-  alignItems: "center",
-  fontFamily: "sans-serif",
-  justifyContent: "space-between"
+class PopUp extends Component {
+  constructor(props) {
+    super(props);
+    console.log(props)
+    this.state = {
+      show: true
+    }
+  }
+  handleClose = () => {
+    this.setState({
+      show: false
+    })
+  }
+  render() {
+    return (
+      <>
+        {this.state.show ?
+          <div className='pop'>
+            <button className='close'
+              onClick={this.handleClose}>
+              <p className='ex'>+</p>
+            </button>
+            <p className='titleOne'>Don't be a stranger!</p>
+            <p className='sentence'>Add a photo of yourself for fellow drivers to recognize you.</p>
+            <button type='submit'
+              className='willDo'>
+              Will Do
+            </button>
+          </div>
+          :
+          null
+        }
+      </>
+    );
+  }
 }
 
-function PopUp(props) {
-  return (
-    <div className='pop'>
-      <button className='close'>
-        <p className='ex'>+</p>
-      </button>
-      <p className='titleOne'>Don't be a stranger!</p>
-      <p className='sentence'>Add a photo of yourself for fellow drivers to recognize you.</p>
-      <button className='willDo'>Will Do</button>
-    </div>
-  );
-}
-
-export default PopUp;
+export default withRouter(PopUp);

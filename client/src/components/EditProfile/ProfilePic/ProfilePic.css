@@ -39,8 +39,37 @@ background-color: #ffffff;
 border-radius: 50%;
 }
 .picMenu {
+  position: fixed;
+  top: 0;
+  margin-left: 121px;
   width: 1119px;
   height: 627px;
   background-image: url('https://i.imgur.com/dWB0vPI.jpg');
-  border: 1px solid rgb(215, 215, 215)
+  border: 1px solid rgb(215, 215, 215);
+  z-index: 1;
+}
+.imgInput {
+  position: relative;
+  width: 856px;
+  height: 252px;
+  z-index: 2;
+  background-color: #ffffff;
+  margin-top: 320px;
+  margin-left: 262px;
+}
+.imgL {
+  position: relative;
+  margin-left: 178px;
+  margin-top: 0;
+}
+.imgI {
+  margin-left: 242px;
+  margin-top: 25px;
+}
+.imgB {
+  margin-left: 191.5px;
+  margin-top: 0;
+}
+.imgB:focus {
+  outline: none;
 }
