@@ -2,7 +2,7 @@
   position: relative;
     border-right: 40px solid #ddf3f5;
     border-left: 40px solid #ddf3f5;
-     height: 70vh;
+     height: 75vh;
 }
 
 .create-user-account {
@@ -49,3 +49,7 @@ input{
   border-color: #e96e2d;
 }
 
+.error-message {
+  color: red;
+
+}
