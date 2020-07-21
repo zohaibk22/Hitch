@@ -16,7 +16,8 @@ const styles = {
 
 function ProfilePic(props) {
   return (
-    <div className='circle'>
+    <>
+    <button className='circle'>
       <div className='head'></div>
       <div className='shoulder'></div>
       <div className='cameraC'>
@@ -26,7 +27,10 @@ function ProfilePic(props) {
             fill='#051d54' />
         </div>
       </div>
-    </div>
+    </button>
+    {/* <div className='picMenu'>
+      </div> */}
+    </>
   );
 }
 

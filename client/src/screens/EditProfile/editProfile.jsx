@@ -27,6 +27,7 @@ class EditProfile extends Component {
         hometown: '',
         active: true,
       },
+      picStatus: true,
     }
   }
   // async componentDidMount() {
@@ -54,20 +55,26 @@ class EditProfile extends Component {
   }
   handleSubmit = async (event) => {
     event.preventDefault()
-    let { id } = this.props.match.params
-    const profile = await axios.put(`https://hitch-account-info.herokuapp.com/api/profile/${id}`, this.state.profile)
-    console.log(profile)
+    const { profile } = this.state
+    // console.log(profile.profilePicture)
+    // if (profile.profilePicture === false || profile.profilePicture === 'test.png') {
+    // //   return <PopUp />
+    // } else {
+    //   let { id } = this.props.match.params
+    //   const profile = await axios.put(`https://hitch-account-info.herokuapp.com/api/profile/${id}`, this.state.profile)
+    //   console.log(profile)
+    // }
   }
   render() {
     const { profile } = this.state
-    console.log(profile.fullName)
+    console.log(profile)
     return (
       <>
         <Header />
         <Main>
           <Heading />
           <ProfilePic />
-          <PopUp />
+          {this.state.picStatus ? null : <PopUp />}
           <form className='editForm' onSubmit={this.handleSubmit}>
             <div className='formC'>
               <div className='formItem'>
