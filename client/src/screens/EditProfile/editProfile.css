@@ -61,4 +61,23 @@ textarea:focus {
   border-color: rgb(243, 111, 58);
   outline: none
 }
-
+.titleOne {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 64px;
+  font-weight: bold;
+  margin-bottom: 24px;
+  margin-left: 88px;
+  margin-top: 0;
+  padding-top: 78px;
+  color: rgb(0, 160, 154);
+  z-index: 1;
+}
+@media (max-width: 1000px) {
+  .titleOne {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    margin: auto 0;
+    color: rgb(0, 160, 154);
+  }
+}
