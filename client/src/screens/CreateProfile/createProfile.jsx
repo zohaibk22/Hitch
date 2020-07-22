@@ -3,6 +3,9 @@ import { createProfile } from "../../services/profile";
 import "./createProfile.css";
 import {Redirect} from 'react-router-dom'
 import Layout from "../../components/shared/Layout/Layout"
+import {withRouter} from 'react-router-dom'
+import Filter from "../../components/CreateProfile/Filter"
+
 
 
 class CreateProfile extends Component {
@@ -15,6 +18,7 @@ class CreateProfile extends Component {
         password: "",
         confirmPassword: "",
         match: false,
+        _id: '',
       },
       created: false,
       errors: {
@@ -70,8 +74,6 @@ class CreateProfile extends Component {
       confirmPasswordValid: confirmPasswordValid,
     }, this.formValidation)
     
-
-    
   }
 
   formValidation() {
@@ -108,16 +110,17 @@ class CreateProfile extends Component {
       created
      })
     }
-
-
-
   }
 
+   
   render() {
     const { profile, created } = this.state;
 
+
+
     if(created) { 
-      return <Redirect to={`/profile/update/jfkjdnkd`} />
+
+      return <Redirect to={`/profile/update/,nkjfnkjn`} />
 
     }
 
@@ -168,10 +171,11 @@ class CreateProfile extends Component {
            <button  type= "submit" className="create-profile-button" disabled={!this.state.formValid}
           >Create Account</button>
         </form>
+        <Filter email={this.state.profile.email} />
       </div>
       </Layout>
     );
   }
 }
 
-export default CreateProfile;
+export default withRouter(CreateProfile);
