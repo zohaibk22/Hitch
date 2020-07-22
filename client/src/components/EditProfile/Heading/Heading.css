@@ -1,18 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700');
-h1 {
+.titleOne {
   font-family: 'Open Sans', sans-serif;
   font-size: 64px;
   font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
   margin-bottom: 24px;
   margin-left: 88px;
   margin-top: 0;
   padding-top: 78px;
-}
-.title {
   color: rgb(0, 160, 154);
+}
+@media (max-width: 1000px) {
+  .titleOne {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+    font-weight: bold;
+    margin: -29px 0 0 0;
+    color: rgb(0, 160, 154);
+  }
 }
 

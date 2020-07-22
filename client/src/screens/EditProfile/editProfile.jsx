@@ -79,7 +79,7 @@ class EditProfile extends Component {
         <Header />
         <Main>
         <Heading />
-          {/* <ProfilePic />
+          <ProfilePic />
           {this.state.picStatus ? null : <PopUp />}
           <form className='editForm' onSubmit={this.handleSubmit}>
             <div className='formC'>
@@ -199,7 +199,7 @@ class EditProfile extends Component {
               </div>
             </div>
             <CreateProfileButton />
-          </form>  */}
+          </form>
         </Main>
         <Footer />
       </>

@@ -4,7 +4,7 @@ import '../Main/Main.css'
 function Main(props) {
   return (
     <main>
-      {/* {props.children} */}
+      {props.children}
     </main>
   );
 }
