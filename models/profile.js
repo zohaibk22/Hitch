@@ -14,6 +14,9 @@ const Profile = new Schema(
     age: { type: String, required: false },
     recentReview: { type: String, required: false },
     hometown: { type: String, required: false },
+    travelPref: { type: String, required: false },
+    smokeFree: { type: Boolean, required: false },
+    snacks: { type: Boolean, required: false },
     active: { type: Boolean, required: false },
   },
 
