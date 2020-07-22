@@ -20,8 +20,9 @@ class ProfilePic extends Component {
   constructor(props) {
     super(props);
     this.state = {
-        profilePicture: '',
-      }
+      profilePicture: '',
+      show: false
+    }
   }
   async componentDidMount() {
     let { id } = this.props.match.params
@@ -30,10 +31,21 @@ class ProfilePic extends Component {
       profilePicture: res.data.profilePicture
     })
   }
+  handleOpen = () => {
+    this.setState({
+      show: true
+    })
+  }
+  handleClose = () => {
+    this.setState({
+      show: false
+    })
+  }
   render() {
     return (
       <>
-        <button className='circle'>
+        <button className='circle'
+          onClick={this.handleOpen}>
           <div className='head'></div>
           <div className='shoulder'></div>
           <div className='cameraC'>
@@ -44,13 +56,19 @@ class ProfilePic extends Component {
             </div>
           </div>
         </button>
-        <div className='picMenu'>
-          <div className='imgInput'>
-            <label className='imgL'>please enter the url for your profile image</label>
-            <input className='imgI' value={this.state.profilePicture}></input>
-            <button className='imgB'>Submit</button>
-          </div>
-        </div>
+        {this.state.show ?
+          <>
+            <div className='picMenu'>
+              <div className='imgInput'>
+                <label className='imgL'>please enter the url for your profile image</label>
+                <input className='imgI' value={this.state.profilePicture}></input>
+                <button className='imgB'>Submit</button>
+              </div>
+              <button className='fake' onClick={this.handleClose}></button>
+            </div>
+          </>
+          :
+          null}
       </>
     );
   }

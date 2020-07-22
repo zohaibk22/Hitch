@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import CreateProfileButton from '../../components/EditProfile/Button/CreateProfileButton'
-// import { updateProfile } from '../../services/profile'
+import { getProfile, updateProfile } from '../../services/profile'
 import { withRouter } from 'react-router-dom'
 import axios from 'axios'
 import './editProfile.css'
@@ -30,36 +30,32 @@ class EditProfile extends Component {
       picStatus: true,
     }
   }
-  // async componentDidMount() {
-  //   let { id } = this.props.match.params
-  //   console.log(id)
-  //   const profile = await getProfile(id)
-  //   console.log(profile)
-  //   this.setState({ profile })
-  // }
   async componentDidMount() {
     let { id } = this.props.match.params
-    const res = await axios(`https://hitch-account-info.herokuapp.com/api/profile/${id}`)
-    const profile = res.data
+    const profile = await getProfile(id)
+    console.log(profile)
     this.setState({ profile })
   }
   handleChange = (event) => {
-    const { value } = event.target
+    const { name, value } = event.target
     this.setState({
-      profilePicture: value
+      profile: {
+        ...this.state.profile,
+        [name]: value
+      }
     })
   }
   handleSubmit = async (event) => {
-    event.preventDefault()
-    const { profile } = this.state
-    if (profile.profilePicture === false || profile.profilePicture === 'test.png') {
+    // event.preventDefault()
+    if (this.state.profile.profilePicture === false
+      || this.state.profile.profilePicture === 'test.png') {
       this.setState({
         picStatus: false
       })
     } else {
       let { id } = this.props.match.params
-      const profile = await axios.put(`https://hitch-account-info.herokuapp.com/api/profile/${id}`, this.state.profile)
-      console.log(profile)
+      const profile = await updateProfile(id, this.state.profile)
+      this.setState({ profile })
     }
   }
   handleWillDo = () => {
@@ -68,56 +64,85 @@ class EditProfile extends Component {
     })
   }
   render() {
-    const { profile } = this.state
-    console.log(profile)
+    console.log(this.state.profile.fullName)
+    const profile = this.state.profile
     return (
       <>
         <Header />
         <Main>
           <Heading />
           <ProfilePic />
-          {this.state.picStatus ? null : <PopUp onSubmit={this.handleWillDo} />}
+          {this.state.picStatus ? null : <PopUp onSubmit={this.handleWillDo}/>}
           <form className='editForm' onSubmit={this.handleSubmit}>
             <div className='formC'>
               <div className='formItem'>
                 <label>Full Name:</label>
-                <input type='text' id='fullName' name='fullName'
-                  value={profile.fullName} onChange={this.handleChange}></input>
+                <input
+                  type='text'
+                  id='fullName'
+                  name='fullName'
+                  value={profile.fullName}
+                  onChange={this.handleChange}></input>
               </div>
               <div className='formItem'>
                 <label>Hometown:</label>
-                <input type='text' id='hometown' name='hometown'
-                  defaultValue={profile.hometown} onChange={this.handleChange}></input>
+                <input
+                  type='text'
+                  id='hometown'
+                  name='hometown'
+                  value={profile.hometown}
+                  onChange={this.handleChange}></input>
               </div>
             </div>
             <div className='formC'>
               <div className='formItem'>
                 <label>School:</label>
-                <input type='text' id='school' name='school'
-                  defaultValue={profile.school} onChange={this.handleChange}></input>
+                <input
+                  type='text'
+                  id='school'
+                  name='school'
+                  value={profile.school}
+                  onChange={this.handleChange}></input>
               </div>
               <div className='formItem'>
                 <label>Major:</label>
-                <input type='text' id='major' name='major'
-                  defaultValue={profile.major} onChange={this.handleChange}></input>
+                <input
+                  type='text'
+                  id='major'
+                  name='major'
+                  value={profile.major}
+                  onChange={this.handleChange}></input>
               </div>
             </div>
             <div className='formC'>
               <div className='formItem'>
                 <label>Graduation Year:</label>
-                <input type='text' id='gradYear' name='gradYear'
-                  defaultValue={profile.graduationYear} onChange={this.handleChange}></input>
+                <input
+                  type='text'
+                  id='gradYear'
+                  name='gradYear'
+                  value={profile.graduationYear}
+                  onChange={this.handleChange}></input>
               </div>
               <div className='formItem'>
                 <label>Age:</label>
-                <input type='text' id='age' name='age'
-                  defaultValue={profile.age} onChange={this.handleChange}></input>
+                <input
+                  type='text'
+                  id='age'
+                  name='age'
+                  value={profile.age}
+                  onChange={this.handleChange}></input>
               </div>
             </div>
             <div className='bio'>
               <label>Bio:</label>
-              <textarea type='text' id='bio' name='bio' className='bioInput'
-                defaultValue={profile.bio} onChange={this.handleChange}></textarea>
+              <textarea
+                type='text'
+                id='bio'
+                name='bio'
+                className='bioInput'
+                value={profile.bio}
+                onChange={this.handleChange}></textarea>
             </div>
             <CreateProfileButton />
           </form>

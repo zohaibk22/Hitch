@@ -72,4 +72,17 @@ border-radius: 50%;
 }
 .imgB:focus {
   outline: none;
+  border: 1px solid black;
+}
+.fake {
+  position: relative;
+  width: 107px;
+  height: 27px;
+  margin-left: 889px;
+  margin-top: 20px;
+  border-radius: 10%;
+  background: transparent;
+}
+.fake:focus {
+  border: 2px solid black;
 }
