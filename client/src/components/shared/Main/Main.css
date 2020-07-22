@@ -5,4 +5,15 @@ border-left: 40px solid #e1f2f1;
 border-right: 40px solid #e1f2f1;
 margin-top: 0;
 padding-bottom: 228px;
+z-index: 0;
+}
+@media (max-width: 1000px) {
+  main {
+    width: 95%;
+    height: 100vh;
+    border: 10px solid #e1f2f1;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+  }
 }

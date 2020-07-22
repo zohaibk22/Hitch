@@ -10,21 +10,12 @@ h4 {
   font-family: 'Open Sans', sans-serif;
   font-size: 32px;
   font-weight: 600;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
   color: #ffffff;
   margin-bottom: 27px;
 }
-p {
+.footerItem  {
   font-family: 'Open Sans', sans-serif;
   font-size: 24px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
   color: #ffffff;
   margin-top: -20px;
   margin-bottom: 25px;
@@ -55,4 +46,67 @@ p {
   line-height: normal;
   letter-spacing: normal;
   color: #ffffff;
+}
+@media (max-width: 800px) {
+  footer {
+    background-color: #051d54;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding-bottom: 19px;
+  }
+  .footerColumnOne {
+    padding: 0;
+    margin: 0 auto;
+    margin-top: -10px;
+    width: auto;
+    font-size: 16px;
+    font-weight: 400;
+  }
+  .footerColumn {
+    width: auto;
+    margin: 0 auto;
+    font-size: 16px;
+    font-weight: 400;
+  }
+  .footerItemSocial {
+    width: auto;
+    margin: 0 auto;
+    font-size: 16px;
+    font-weight: 400;
+  }
+  .fhOne{
+    font-size: 24px;
+  }
+  .fh{
+    font-size: 24px;
+    margin-top: -2px;
+  }
+  .footerItem, .footerItemSocial {
+    padding-top: -10px;
+  }
+  .ft {
+    font-size: 16px;
+    font-weight: 400;
+    padding-top: 3px;
+    padding-bottom: 1px;
+    margin: 0;
+  }
+  .fhTwo {
+    font-size: 16px;
+    font-weight: 600;
+  }
+  .copyright {
+    position: inherit;
+    margin: 0 auto;
+    padding-bottom: 10px;
+    width: 293px;
+    height: 19px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 24px;
+    color: #ffffff;
+  }
 }

@@ -10,7 +10,6 @@ import UpdateProfileButton from '../../components/MyProfile/Button/updateButton'
 import DeactivatePopUp from '../../components/MyProfile/DeactivatePopUp/DeactivatePopUp'
 import { deleteProfile } from "../../services/profile";
 
-
 class MyProfile extends Component {
   constructor(props) {
     super(props) 
@@ -46,14 +45,15 @@ class MyProfile extends Component {
   }
 
   handleClick = async (event) => {
-    let { id } = this.props.match.params
-    const deleted = await deleteProfile(id)
-    this.setState ({
-    deleted
-   })
-   this.props.history.push(`/`)
-  console.log(deleted._id)
-  }
+      let { id } = this.props.match.params
+      const deleted = await deleteProfile(id)
+      this.setState ({
+      deleted
+     })
+     this.props.history.push(`/`)
+    console.log(deleted._id)
+    }
+  
 
   // async componentDidMount() {
   //   let { id } = this.props.match.params
@@ -84,9 +84,9 @@ class MyProfile extends Component {
                 <div className="review-text">"{profile.recentReview}"</div>
                 <h2 className="travel-pref">Travel Preferences</h2>
                 <div className="button-container">
-                 <Link to="/profile/update/:id" ><UpdateProfileButton /></Link>
+                  <Link to={`/profile/update/${id}`} ><UpdateProfileButton /></Link>
                   <h2 className="remove-account">Want to remove your account?</h2>
-                  <Link to="/profile/:id"className="remove-button">Deactivate Account</Link>
+                  <Link className="remove-button" onClick={this.handleClick}>Deactivate Account</Link>
                 </div>
               </div>
 

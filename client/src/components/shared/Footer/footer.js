@@ -5,42 +5,42 @@ function Footer(props) {
   return (
     <footer>
       <div className='footerColumnOne'>
+      <h4 className='fhOne'>Get to Know Us</h4>
         <div className='footerItem'>
-          <h4>Get to Know Us</h4>
-          <p>About Hitch</p>
-          <p>Press</p>
-          <p>Careers</p>
+          <p className='ft'>About Hitch</p>
+          <p className='ft'>Press</p>
+          <p className='ft'>Careers</p>
         </div>
+      <h4 className='fh'>Customer Service</h4>
         <div className='footerItem'>
-          <h4>Customer Service</h4>
-          <p>Contact Us</p>
-          <p>FAQ</p>
+          <p className='ft'> Contact Us</p>
+          <p className='ft'>FAQ</p>
         </div>
       </div>
       <div className='footerColumn'>
+      <h4 className='fh'>Site Support</h4>
         <div className='footerItem'>
-          <h4>Site Support</h4>
-          <p>Sitemap</p>
-          <p>Acessibility</p>
-          <p>Website Feedback</p>
+          <p className='ft'>Sitemap</p>
+          <p className='ft'>Acessibility</p>
+          <p className='ft'>Website Feedback</p>
         </div>
+        <h4 className='fh'>Policies</h4>
         <div className='footerItem'>
-          <h4>Policies</h4>
-          <p>Saftey</p>
-          <p>Legal</p>
-          <p>Privacy</p>
+          <p className='ft'>Saftey</p>
+          <p className='ft'>Legal</p>
+          <p className='ft'>Privacy</p>
         </div>
       </div>
       <div className='footerColumn'>
+        <h4 className='fh'>Stay Connected</h4>
         <div className='footerItemSocial'>
-          <h4>Stay Connected</h4>
         </div>
         <div className='footerItemSocial'>
-          <p>Join our Email List</p>
+          <p className='fhTwo'>Join our Email List</p>
         </div>
       </div>
       <div className='copyright'>
-        <p>©2020 Hitch</p>
+        <p className='ft'>©2020 Hitch</p>
       </div>
     </footer>
   );
