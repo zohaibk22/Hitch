@@ -17,6 +17,9 @@ const main = async () => {
       age: "18",
       recentReview: "Ride was great! 5 Stars!",
       hometown: "New York City",
+      travelPref: "rap",
+      smokeFree: true,
+      snacks: false,
       active: true,
     },
   ];
