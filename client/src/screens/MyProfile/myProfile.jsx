@@ -1,9 +1,13 @@
 import React, { Component } from 'react'
 import './myProfile.css'
-import { withRouter } from 'react-router-dom'
+import { withRouter, Link } from 'react-router-dom'
 import axios from 'axios'
-
-
+import Main from '../../components/shared/Main/Main'
+import Header from '../../components/shared/Header/header'
+import Footer from '../../components/shared/Footer/footer'
+import { getProfile, updateProfile } from "../../services/profile"
+import UpdateProfileButton from '../../components/MyProfile/Button/updateButton'
+import DeactivatePopUp from '../../components/MyProfile/DeactivatePopUp/DeactivatePopUp'
 class MyProfile extends Component {
   constructor(props) {
     super(props) 
@@ -18,25 +22,34 @@ class MyProfile extends Component {
         age: '',
         recentReview: '',
         homeTown: '',
+        active: true,
 
       }
     }
   }
 
-  //async componentDidMount() {
-    //let { id } = this.props.match.params
-    //const profile = await getProfile(id)
-    //this.setState({ profile })
-  //}
-
-
   async componentDidMount() {
+    //debugger
     let { id } = this.props.match.params
-    const res = await axios(`https://hitch-account-info.herokuapp.com/api/profile/${id}`)
+    //debugger
+    const res = await getProfile(id)
+    //debugger
     console.log(res.data)
-    const profile = res.data
+    //debugger
+    const profile = res;
     this.setState({ profile })
+    console.log(this.state)
+    //debugger
   }
+
+
+  // async componentDidMount() {
+  //   let { id } = this.props.match.params
+  //   const res = await axios(`https://hitch-account-info.herokuapp.com/api/profile/${id}`)
+  //   console.log(res.data)
+  //   const profile = res.data
+  //   this.setState({ profile })
+  // }
 
 
 
@@ -44,22 +57,49 @@ class MyProfile extends Component {
     const { profile } = this.state
     console.log(profile.bio)
     return (
-      
-        <div className="profile-details">
-          <img className="profile-details-image" src={profile.imgUrl} alt={profile.name} />
-          <div className="detail">
-            <div className="name">{profile.name}</div>
-            <div className="bio">{profile.bio}</div>
-            <div className="school">{profile.school}</div>
-            <div className="major">{profile.major}</div>
-            <div className="graduation">{profile.graduationYear}</div>
-            <div className="age">{profile.age}</div>
-            <div className="recentReview">{profile.recentReview}</div>
-            <div className="hometown">{profile.homeTown}</div>
-        
+      <>
+        <Header />
+        <Main>
+          <div className="profile-details">
+          <h2 className="my-profile">My Profile</h2>
+            <div class="profile-container">
+              <div className="left-profile">
+               
+                <h2 className="bio-head">Bio</h2>
+                <div className="profile-bio">{profile.bio}</div>
+                <h2 className="recentReview">Most Recent Review</h2>
+                <div className="review-text">"{profile.recentReview}"</div>
+                <h2 className="travel-pref">Travel Preferences</h2>
+                <div className="button-container">
+                 <Link to="/profile/update/:id" ><UpdateProfileButton /></Link>
+                  <h2 className="remove-account">Want to remove your account?</h2>
+                  <Link to="/profile/:id"className="remove-button">Deactivate Account</Link>
+                </div>
+              </div>
+
+              <div className="right-profile">
+                <img className="profile-details-image" src={profile.imgUrl} alt={profile.fullName} />
+                <div className="name-pic">
+                  <div className="name">{profile.fullName}</div>
+                  <div className="age">{profile.age}</div>
+                  <div className="hometown">{profile.homeTown}</div>
+                  <div className="school">{profile.school}</div>
+                  <div className="major">{profile.major}</div><div className="graduation">{profile.graduationYear}</div>
+                </div>
+              </div>
+            </div>
+            
+              
+
+              
+            
+            
           </div>
-        </div>
-      
+
+          
+        </Main>
+        <Footer />
+        </>
     )
   }
 }

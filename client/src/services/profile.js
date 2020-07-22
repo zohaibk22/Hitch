@@ -5,13 +5,14 @@ export const getProfile = async (id) => {
     const response = await api.get(`/profile/${id}`);
     return response.data;
   } catch (error) {
+    console.log(error);
     throw error;
   }
 };
 
 export const createProfile = async (profile) => {
   try {
-    const response = await api.post("/profile/create", profile);
+    const response = await api.post("/profiles", profile);
     return response.data;
   } catch (error) {
     throw error;
@@ -34,5 +35,4 @@ export const deleteProfile = async (id) => {
   } catch (error) {
     throw error;
   }
-
 };

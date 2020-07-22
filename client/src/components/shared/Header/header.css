@@ -52,4 +52,16 @@ li {
 }
 .four {
   margin-right: 50px;
+  
+  
+
 }
+.four:visited{
+  color: red
+}
+
+a {
+  text-decoration: none;
+}
+
+
