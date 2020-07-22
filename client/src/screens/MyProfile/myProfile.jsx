@@ -71,7 +71,7 @@ class MyProfile extends Component {
                 <div className="review-text">"{profile.recentReview}"</div>
                 <h2 className="travel-pref">Travel Preferences</h2>
                 <div className="button-container">
-                  <UpdateProfileButton />
+                 <Link to="/profile/update/:id" ><UpdateProfileButton /></Link>
                   <h2 className="remove-account">Want to remove your account?</h2>
                   <Link to="/profile/:id"className="remove-button">Deactivate Account</Link>
                 </div>
