@@ -14,40 +14,47 @@ class CreateProfile extends Component {
         email: "",
         password: "",
         confirmPassword: "",
-        match: true,
+        match: false,
       },
       created: false,
       errors: {
         email: null,
         password: null,
+        confirmPassword: null,
       },
       emailValid: false,
       passwordValid: false,
+      confirmPasswordValid: false,
       formValid: false,
     };
   }
 
   validation = (name, value) => {
-    let {emailValid, passwordValid, formValid, errors, profile} = this.state;
+    let {emailValid, passwordValid, errors, profile, confirmPasswordValid} = this.state;
 
     switch(name) {
       case 'email':
         emailValid = value.match(/^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i);
         // errors.email = emailValid ? true : false;
-        errors.email = emailValid ? '' :"is invalid"
+        errors.email = emailValid ? true : false;
         break;
 
       case 'password':
         passwordValid = value.length >= 8;
         // errors.password = passwordValid ? true : false
-        errors.password = passwordValid ? '' : "is too short"
+        errors.password = passwordValid ? true : false
+        break;
 
-        if(profile.password !== profile.confirmPassword){
-         profile.match = false;
+      case 'confirmPassword' :
+        confirmPasswordValid = value.length >= 8;
+        errors.confirmPassword = confirmPasswordValid ? true : false;
+
+        if(profile.password === profile.confirmPassword){
+         profile.match = true;
          console.log(profile.match);
         }
         else {
-          profile.match = true;
+          profile.match = false;
         }
         break;
       
@@ -60,6 +67,7 @@ class CreateProfile extends Component {
       errors: errors,
       emailValid: emailValid,
       passwordValid: passwordValid,
+      confirmPasswordValid: confirmPasswordValid,
     }, this.formValidation)
     
 
@@ -68,7 +76,7 @@ class CreateProfile extends Component {
 
   formValidation() {
     this.setState({
-      formValid: this.state.emailValid && this.state.passwordValid
+      formValid: this.state.emailValid && this.state.passwordValid && this.state.confirmPasswordValid
     })
   }
 
@@ -109,7 +117,7 @@ class CreateProfile extends Component {
     const { profile, created } = this.state;
 
     if(created) { 
-      return <Redirect to={`/`} />
+      return <Redirect to={`/profile/update/jfkjdnkd`} />
 
     }
 
@@ -152,7 +160,7 @@ class CreateProfile extends Component {
             onChange={this.handleChange}
           />
 
-          {this.state.profile.match ? null : <p className = "error-message">Paswwords do not match</p>}
+          {this.state.profile.match ? null : <p className = "error-message">Passwords do not match</p>}
 
 
 
