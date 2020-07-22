@@ -67,8 +67,8 @@ class EditProfile extends Component {
       })
     } else {
       let { id } = this.props.match.params
-      const profile = await updateProfile(id, this.state.profile)
-      this.setState({ profile })
+      await updateProfile(id, this.state.profile)
+      // this.setState({ profile })
     }
   }
   render() {

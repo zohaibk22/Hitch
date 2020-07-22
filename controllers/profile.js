@@ -37,6 +37,7 @@ const createProfile = async (req, res) => {
 };
 
 const updateProfile = async (req, res) => {
+  console.log("Hello");
   const { id } = req.params;
   await Profile.findByIdAndUpdate(
     id,

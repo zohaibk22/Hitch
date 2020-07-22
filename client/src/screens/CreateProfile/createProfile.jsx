@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import { createProfile } from "../../services/profile";
 import "./createProfile.css";
-import {Redirect} from 'react-router-dom'
-import Layout from "../../components/shared/Layout/Layout"
 import {withRouter} from 'react-router-dom'
+import Layout from "../../components/shared/Layout/Layout"
 import Filter from "../../components/CreateProfile/Filter"
+
 
 
 
@@ -18,7 +18,7 @@ class CreateProfile extends Component {
         password: "",
         confirmPassword: "",
         match: false,
-        _id: '',
+        id: '',
       },
       created: false,
       errors: {
@@ -109,20 +109,22 @@ class CreateProfile extends Component {
       this.setState ({
       created
      })
+     this.props.history.push(`/profile/update/${created._id}`)
     }
   }
 
    
   render() {
     const { profile, created } = this.state;
+  
 
 
 
-    if(created) { 
+    // if(created) { 
 
-      return <Redirect to={`/profile/update/,nkjfnkjn`} />
+    //   return <Redirect to={`/profile/update/,nkjfnkjn`} />
 
-    }
+    // }
 
 
     return (

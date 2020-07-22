@@ -16,10 +16,10 @@ function App() {
       <Route exact path="/">
         <Home />
       </Route>
-    <Route exact path="/profile/:id">
-      <MyProfile />
-    </Route>
-     <Route exact path="/profile/create">
+      <Route exact path="/profile/:id">
+        <MyProfile />
+      </Route>
+      <Route exact path="/create/profile">
         <CreateProfile />
       </Route>
 
