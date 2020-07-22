@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom'
-import EditProfile from '../../../screens/EditProfile/editProfile'
 import './PopUp.css'
 
 class PopUp extends Component {
