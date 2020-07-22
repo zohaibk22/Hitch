@@ -68,6 +68,7 @@ class EditProfile extends Component {
     } else {
       let { id } = this.props.match.params
       await updateProfile(id, this.state.profile)
+      this.props.history.push(`/profile/${id}`)
       // this.setState({ profile })
     }
   }
@@ -77,8 +78,8 @@ class EditProfile extends Component {
       <>
         <Header />
         <Main>
-          <Heading />
-          <ProfilePic />
+        <Heading />
+          {/* <ProfilePic />
           {this.state.picStatus ? null : <PopUp />}
           <form className='editForm' onSubmit={this.handleSubmit}>
             <div className='formC'>
@@ -198,7 +199,7 @@ class EditProfile extends Component {
               </div>
             </div>
             <CreateProfileButton />
-          </form>
+          </form>  */}
         </Main>
         <Footer />
       </>

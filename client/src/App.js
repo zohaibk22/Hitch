@@ -22,11 +22,9 @@ function App() {
       <Route exact path="/create/profile">
         <CreateProfile />
       </Route>
-
       <Route exact path="/profile/signup/:id">
         <EditProfile />
       </Route>
-
       <Route path="/signin">
         <Login />
       </Route>
