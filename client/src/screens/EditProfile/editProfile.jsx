@@ -9,6 +9,7 @@ import Main from '../../components/shared/Main/Main'
 import Heading from '../../components/EditProfile/Heading/Heading'
 import Header from '../../components/shared/Header/header'
 import Footer from '../../components/shared/Footer/footer'
+import SvgIcons from '../../components/shared/SVGIcons/SvgIcons'
 
 class EditProfile extends Component {
   constructor(props) {
@@ -70,18 +71,14 @@ class EditProfile extends Component {
       this.setState({ profile })
     }
   }
-  parentFunction() {
-    this._child.changeTheState();
-  }
   render() {
-    console.log(this.state.profile.fullName)
     const profile = this.state.profile
     return (
       <>
         <Header />
         <Main>
           <Heading />
-          <ProfilePic ref={component => this._child = component} />
+          <ProfilePic />
           {this.state.picStatus ? null : <PopUp />}
           <form className='editForm' onSubmit={this.handleSubmit}>
             <div className='formC'>
@@ -129,8 +126,8 @@ class EditProfile extends Component {
                 <label>Graduation Year:</label>
                 <input
                   type='text'
-                  id='gradYear'
-                  name='gradYear'
+                  id='graduationYear'
+                  name='graduationYear'
                   defaultValue={profile.graduationYear}
                   onChange={this.handleChange}></input>
               </div>
@@ -159,19 +156,25 @@ class EditProfile extends Component {
                 <label>Profile Picture URL:</label>
                 <input
                   type='text'
-                  id='pic'
-                  name='pic'
+                  id='profilePicture'
+                  name='profilePicture'
                   defaultValue={profile.profilePicture}
                   onChange={this.handleChange}></input>
               </div>
             </div>
             <div className='formC'>
+              <SvgIcons name='music'
+                width={39}
+                fill='#051d54' />
+              <label>Select Travel Preferences:</label>
+            </div>
+            <div className='formC'>
               <div className='formItem'>
-                <label>Select Travel Preferences:</label>
                 <input
                   type='text'
                   id='music'
                   name='music'
+                  placeholder='Enter favorite music genres'
                   defaultValue={profile.music}
                   onChange={this.handleChange}></input>
               </div>

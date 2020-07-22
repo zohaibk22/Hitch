@@ -28,7 +28,6 @@ class ProfilePic extends Component {
     let { id } = this.props.match.params
     const res = await getProfile(id)
     console.log(res)
-    
     this.setState({
       profilePicture: res.profilePicture
     })
@@ -57,6 +56,7 @@ class ProfilePic extends Component {
   //   })
   // }
   render() {
+    const pic = this.state.profilePicture
     return (
       <>
         <button className='circle'
@@ -71,6 +71,18 @@ class ProfilePic extends Component {
             </div>
           </div>
         </button>
+        {pic ?
+          <div className='circleTwo'
+            style={{
+              backgroundImage: `url(${pic})`
+            }}>
+          </div>
+          :
+          <div className='circleTwo'
+            style={{
+              background: 'transparent'
+            }}>
+          </div>}
         {/* {this.state.show ?
           <>
             <div className='picMenu'>
