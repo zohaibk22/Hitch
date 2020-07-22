@@ -54,6 +54,7 @@ textarea {
   font-size: 24px;
   color: #051d54;
   resize: none;
+  margin-bottom: 28px;
 }
 
 textarea:focus {

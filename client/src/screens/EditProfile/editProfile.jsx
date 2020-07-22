@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import CreateProfileButton from '../../components/EditProfile/Button/CreateProfileButton'
 import { getProfile, updateProfile } from '../../services/profile'
 import { withRouter } from 'react-router-dom'
-import axios from 'axios'
 import './editProfile.css'
 import ProfilePic from '../../components/EditProfile/ProfilePic/ProfilePic'
 import PopUp from '../../components/EditProfile/PopUp/PopUp'
@@ -28,6 +27,19 @@ class EditProfile extends Component {
         active: true,
       },
       picStatus: true,
+      rImg: false
+    }
+  }
+  componentWillMount() {
+    if (this.state.profile.profilePicture === false
+      || this.state.profile.profilePicture === 'test.png') {
+      this.setState({
+        rImg: false
+      })
+    } else {
+      this.setState({
+        rImg: true
+      })
     }
   }
   async componentDidMount() {
@@ -46,7 +58,7 @@ class EditProfile extends Component {
     })
   }
   handleSubmit = async (event) => {
-    // event.preventDefault()
+    event.preventDefault()
     if (this.state.profile.profilePicture === false
       || this.state.profile.profilePicture === 'test.png') {
       this.setState({
@@ -58,10 +70,8 @@ class EditProfile extends Component {
       this.setState({ profile })
     }
   }
-  handleWillDo = () => {
-    this.setState({
-      picStatus: true
-    })
+  parentFunction() {
+    this._child.changeTheState();
   }
   render() {
     console.log(this.state.profile.fullName)
@@ -71,8 +81,8 @@ class EditProfile extends Component {
         <Header />
         <Main>
           <Heading />
-          <ProfilePic />
-          {this.state.picStatus ? null : <PopUp onSubmit={this.handleWillDo}/>}
+          <ProfilePic ref={component => this._child = component} />
+          {this.state.picStatus ? null : <PopUp />}
           <form className='editForm' onSubmit={this.handleSubmit}>
             <div className='formC'>
               <div className='formItem'>
@@ -81,7 +91,7 @@ class EditProfile extends Component {
                   type='text'
                   id='fullName'
                   name='fullName'
-                  value={profile.fullName}
+                  defaultValue={profile.fullName}
                   onChange={this.handleChange}></input>
               </div>
               <div className='formItem'>
@@ -90,7 +100,7 @@ class EditProfile extends Component {
                   type='text'
                   id='hometown'
                   name='hometown'
-                  value={profile.hometown}
+                  defaultValue={profile.hometown}
                   onChange={this.handleChange}></input>
               </div>
             </div>
@@ -101,7 +111,7 @@ class EditProfile extends Component {
                   type='text'
                   id='school'
                   name='school'
-                  value={profile.school}
+                  defaultValue={profile.school}
                   onChange={this.handleChange}></input>
               </div>
               <div className='formItem'>
@@ -110,7 +120,7 @@ class EditProfile extends Component {
                   type='text'
                   id='major'
                   name='major'
-                  value={profile.major}
+                  defaultValue={profile.major}
                   onChange={this.handleChange}></input>
               </div>
             </div>
@@ -121,7 +131,7 @@ class EditProfile extends Component {
                   type='text'
                   id='gradYear'
                   name='gradYear'
-                  value={profile.graduationYear}
+                  defaultValue={profile.graduationYear}
                   onChange={this.handleChange}></input>
               </div>
               <div className='formItem'>
@@ -130,7 +140,7 @@ class EditProfile extends Component {
                   type='text'
                   id='age'
                   name='age'
-                  value={profile.age}
+                  defaultValue={profile.age}
                   onChange={this.handleChange}></input>
               </div>
             </div>
@@ -141,8 +151,48 @@ class EditProfile extends Component {
                 id='bio'
                 name='bio'
                 className='bioInput'
-                value={profile.bio}
+                defaultValue={profile.bio}
                 onChange={this.handleChange}></textarea>
+            </div>
+            <div className='formC'>
+              <div className='formItem'>
+                <label>Profile Picture URL:</label>
+                <input
+                  type='text'
+                  id='pic'
+                  name='pic'
+                  defaultValue={profile.profilePicture}
+                  onChange={this.handleChange}></input>
+              </div>
+            </div>
+            <div className='formC'>
+              <div className='formItem'>
+                <label>Select Travel Preferences:</label>
+                <input
+                  type='text'
+                  id='music'
+                  name='music'
+                  defaultValue={profile.music}
+                  onChange={this.handleChange}></input>
+              </div>
+            </div>
+            <div className='formC'>
+              <div>
+                <label>Snacks Welcome:</label>
+                <input
+                  type='radio'
+                  id='snacks'
+                  name='snacks'
+                  defaultValue={profile.snacks}
+                  onChange={this.handleChange}></input>
+                <label>Smoke Free:</label>
+                <input
+                  type='radio'
+                  id='smoke'
+                  name='smoke'
+                  defaultValue={profile.smoke}
+                  onChange={this.handleChange}></input>
+              </div>
             </div>
             <CreateProfileButton />
           </form>
