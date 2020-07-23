@@ -38,7 +38,7 @@ class MyProfile extends Component {
     //debugger
     const res = await getProfile(id)
     //debugger
-    console.log(res.data)
+    console.log(res)
     //debugger
     const profile = res;
     this.setState({ profile })
@@ -57,13 +57,13 @@ class MyProfile extends Component {
     }
   
 
-  async componentDidMount() {
-    let { id } = this.props.match.params
-    const res = await axios(`https://hitch-account-info.herokuapp.com/api/profile/${id}`)
-    console.log(res.data)
-    const profile = res.data
-    this.setState({ profile })
-  }
+  // async componentDidMount() {
+  //   let { id } = this.props.match.params
+  //   const res = await axios(`https://hitch-account-info.herokuapp.com/api/profile/${id}`)
+  //   console.log(res.data)
+  //   const profile = res.data
+  //   this.setState({ profile })
+  // }
 
 
 
