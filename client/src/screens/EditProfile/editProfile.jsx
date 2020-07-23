@@ -182,44 +182,25 @@ class EditProfile extends Component {
                   onChange={this.handleChange}></input>
               </div>
             </div>
-            <div className='formC'>
-              <div>
-                <label>Snacks Welcome:</label>
-                <div className='radioColumn'>
-                  <div className='radioC'>
-                    <input
-                      type='radio'
-                      id='yes'
-                      name='snacks'
-                      clasName='radio'
-                      value='yes'></input>
-                      <label htmlFor='snacks' className='radioL'>Totes McGoats</label>
-                    <input
-                      type='radio'
-                      id='no'
-                      name='snacks'
-                      clasName='radio'
-                      value='no'></input>
-                    <label htmlFor='snacks'>No, I hate fun.</label>
-                  </div>
-                </div>
-                  <div className='radioC'>
-                <input
-                  type='radio'
-                  id='noSnacks'
-                  name='noSnacks'
-                  defaultValue={profile.snacks}
-                    onChange={this.handleChange}></input>
-                  </div>
-                  </div>
-                <label>Smoke Free:</label>
-                <input
-                  type='radio'
-                  id='smoke'
-                  name='smoke'
-                  defaultValue={profile.smoke}
-                  onChange={this.handleChange}></input>
-              </div>
+            <SvgIcons name='snack'
+                width={30}
+              fill='#051d54'
+              className='snackSvg'/>
+            <label className='plusSvg'>Snacks Welcome:</label>
+            <input
+              type='checkbox'
+              name='snacks'
+              className='check'></input>
+            <SvgIcons name='smoke'
+              width={100}
+              fill='#051d54'
+              className='smokeSvg'/>
+            <label className='plusSvgSmoke'>Smoke Free:</label>
+            <input
+              type='checkbox'
+              id='smoke'
+              name='smoke'
+              className='check'></input>
             <CreateProfileButton />
           </form>
         </Main>

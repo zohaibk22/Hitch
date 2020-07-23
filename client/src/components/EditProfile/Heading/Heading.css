@@ -9,23 +9,13 @@
   padding-top: 78px;
   color: rgb(0, 160, 154);
 }
-@media (max-width: 1000px) {
+@media (max-width: 500px), (min-width: 350px) {
   .titleOne {
     font-family: 'Open Sans', sans-serif;
     font-size: 32px;
     font-weight: 600;
     font-weight: bold;
-    margin: -29px 0 0 0;
-    color: rgb(0, 160, 154);
-  }
-}
-@media (max-width: 550px) {
-  .titleOne {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 24px;
-    font-weight: 600;
-    font-weight: bold;
-    margin: -40px 0 0 0;
+    margin: -61px 0 0 0;
     color: rgb(0, 160, 154);
   }
 }
