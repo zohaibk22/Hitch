@@ -142,15 +142,17 @@ class EditProfile extends Component {
                   onChange={this.handleChange}></input>
               </div>
             </div>
-            <div className='bio'>
-              <label>Bio:</label>
-              <textarea
-                type='text'
-                id='bio'
-                name='bio'
-                className='bioInput'
-                defaultValue={profile.bio}
-                onChange={this.handleChange}></textarea>
+            <div className='formC'>
+              <div className='bio'>
+                <label className='bioL'>Bio:</label>
+                <textarea
+                  type='text'
+                 id='bio'
+                  name='bio'
+                  className='bioInput'
+                  defaultValue={profile.bio}
+                  onChange={this.handleChange}></textarea>
+              </div>
             </div>
             <div className='formC'>
               <div className='formItem'>
@@ -167,7 +169,7 @@ class EditProfile extends Component {
               <SvgIcons name='music'
                 width={39}
                 fill='#051d54' />
-              <label>Select Travel Preferences:</label>
+              <label className='plusSvg'>Select Travel Preferences:</label>
             </div>
             <div className='formC'>
               <div className='formItem'>
@@ -183,12 +185,33 @@ class EditProfile extends Component {
             <div className='formC'>
               <div>
                 <label>Snacks Welcome:</label>
+                <div className='radioColumn'>
+                  <div className='radioC'>
+                    <input
+                      type='radio'
+                      id='yes'
+                      name='snacks'
+                      clasName='radio'
+                      value='yes'></input>
+                      <label htmlFor='snacks' className='radioL'>Totes McGoats</label>
+                    <input
+                      type='radio'
+                      id='no'
+                      name='snacks'
+                      clasName='radio'
+                      value='no'></input>
+                    <label htmlFor='snacks'>No, I hate fun.</label>
+                  </div>
+                </div>
+                  <div className='radioC'>
                 <input
                   type='radio'
-                  id='snacks'
-                  name='snacks'
+                  id='noSnacks'
+                  name='noSnacks'
                   defaultValue={profile.snacks}
-                  onChange={this.handleChange}></input>
+                    onChange={this.handleChange}></input>
+                  </div>
+                  </div>
                 <label>Smoke Free:</label>
                 <input
                   type='radio'
@@ -197,7 +220,6 @@ class EditProfile extends Component {
                   defaultValue={profile.smoke}
                   onChange={this.handleChange}></input>
               </div>
-            </div>
             <CreateProfileButton />
           </form>
         </Main>

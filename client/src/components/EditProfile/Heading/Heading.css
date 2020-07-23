@@ -19,4 +19,14 @@
     color: rgb(0, 160, 154);
   }
 }
+@media (max-width: 550px) {
+  .titleOne {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    font-weight: bold;
+    margin: -40px 0 0 0;
+    color: rgb(0, 160, 154);
+  }
+}
 
