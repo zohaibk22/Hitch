@@ -5,7 +5,7 @@ import "./header.css";
 function Header(props) {
   return (
     <header>
-      <a href="/home">
+      <a href="/">
         <p className="logo">Hitch</p>
       </a>
       {/* <ul>

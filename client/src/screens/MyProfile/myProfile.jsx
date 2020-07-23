@@ -9,6 +9,7 @@ import { getProfile, updateProfile } from "../../services/profile"
 import UpdateProfileButton from '../../components/MyProfile/Button/updateButton'
 import DeactivatePopUp from '../../components/MyProfile/DeactivatePopUp/DeactivatePopUp'
 import { deleteProfile } from "../../services/profile";
+
 class MyProfile extends Component {
   constructor(props) {
     super(props) 
