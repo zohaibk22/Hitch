@@ -11,6 +11,7 @@ import DeactivatePopUp from '../../components/MyProfile/DeactivatePopUp/Deactiva
 import { deleteProfile } from "../../services/profile";
 import ProfilePic2 from '../../components/MyProfile/ProfilePic/ProfilePic2'
 
+
 class MyProfile extends Component {
   constructor(props) {
     super(props) 
