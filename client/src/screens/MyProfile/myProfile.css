@@ -173,3 +173,75 @@ max-width: 700px;
   align-items: center;
 
 }
+
+@media (min-width: 300px){
+  
+  .UpdateProfileButton{
+    width: 475px;
+    height: 41.3px;
+    font-family: OpenSans;
+    font-size: 24px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #ffffff;
+  }
+  
+  .remove-account{
+    width: 355px;
+    height: 40px;
+    font-family: OpenSans;
+    font-size: 24px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #051d54;
+    text-align: center;
+  }
+  
+  .remove-button{
+    width: 355px;
+    height: 40px;
+    font-family: OpenSans;
+    font-size: 24px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #ea6e2d;
+    text-align: center;
+  }
+
+  .a{
+    display: flex;
+    align-self: flex-start;
+    align-items: flex-start;
+  }
+  
+  .button-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  
+  }
+
+  .update-button2{
+
+    align-items: flex-start;
+  }
+
+  .right-profile{
+  display: flex;
+  flex-direction: column;
+  /* justify-content: flex-end; */
+  align-items: center;
+  min-height: 300px;
+  max-width: 300px;
+}
+
+}

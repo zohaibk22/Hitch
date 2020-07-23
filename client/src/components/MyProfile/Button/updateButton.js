@@ -3,6 +3,6 @@ import './updateButton.css'
 
 export default function CreateProfileButton(props) {
   return (
-    <button className="update-button"type='submit'>Update Profile</button>
+    <button className="update-button2"type='submit'>Update Profile</button>
   );
 }

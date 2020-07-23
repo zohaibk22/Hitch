@@ -45,12 +45,17 @@ li {
 }
 .four {
   margin-right: 50px;
+
+  margin-bottom: 55px; 
+  
 }
 .four:visited{
   color: red
 }*/
 a {
   text-decoration: none;
+  /* display: flex;
+  align-items: flex-start; */
 }
 @media (max-width: 500px) {
   header {

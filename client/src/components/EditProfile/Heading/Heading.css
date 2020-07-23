@@ -10,15 +10,10 @@
   padding-top: 78px;
   color: rgb(0, 160, 154);
 }
+
 @media (max-width: 500px) {
   .titleOne {
     font-size: 32px;
-    margin: -61px 0 0 0;
-  }
-}
-@media (max-width: 349px) {
-  .titleOne {
-    font-size: 22px;
     margin: -61px 0 0 0;
   }
 }
