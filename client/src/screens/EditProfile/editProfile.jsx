@@ -142,15 +142,17 @@ class EditProfile extends Component {
                   onChange={this.handleChange}></input>
               </div>
             </div>
-            <div className='bio'>
-              <label>Bio:</label>
-              <textarea
-                type='text'
-                id='bio'
-                name='bio'
-                className='bioInput'
-                defaultValue={profile.bio}
-                onChange={this.handleChange}></textarea>
+            <div className='formC'>
+              <div className='bio'>
+                <label className='bioL'>Bio:</label>
+                <textarea
+                  type='text'
+                 id='bio'
+                  name='bio'
+                  className='bioInput'
+                  defaultValue={profile.bio}
+                  onChange={this.handleChange}></textarea>
+              </div>
             </div>
             <div className='formC'>
               <div className='formItem'>
@@ -167,7 +169,7 @@ class EditProfile extends Component {
               <SvgIcons name='music'
                 width={39}
                 fill='#051d54' />
-              <label>Select Travel Preferences:</label>
+              <label className='plusSvg'>Select Travel Preferences:</label>
             </div>
             <div className='formC'>
               <div className='formItem'>
@@ -180,24 +182,25 @@ class EditProfile extends Component {
                   onChange={this.handleChange}></input>
               </div>
             </div>
-            <div className='formC'>
-              <div>
-                <label>Snacks Welcome:</label>
-                <input
-                  type='radio'
-                  id='snacks'
-                  name='snacks'
-                  defaultValue={profile.snacks}
-                  onChange={this.handleChange}></input>
-                <label>Smoke Free:</label>
-                <input
-                  type='radio'
-                  id='smoke'
-                  name='smoke'
-                  defaultValue={profile.smoke}
-                  onChange={this.handleChange}></input>
-              </div>
-            </div>
+            <SvgIcons name='snack'
+                width={30}
+              fill='#051d54'
+              className='snackSvg'/>
+            <label className='plusSvg'>Snacks Welcome:</label>
+            <input
+              type='checkbox'
+              name='snacks'
+              className='check'></input>
+            <SvgIcons name='smoke'
+              width={100}
+              fill='#051d54'
+              className='smokeSvg'/>
+            <label className='plusSvgSmoke'>Smoke Free:</label>
+            <input
+              type='checkbox'
+              id='smoke'
+              name='smoke'
+              className='check'></input>
             <CreateProfileButton />
           </form>
         </Main>
