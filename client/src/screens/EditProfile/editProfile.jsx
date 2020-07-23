@@ -60,23 +60,21 @@ class EditProfile extends Component {
   }
   handleSubmit = async (event) => {
     event.preventDefault()
-    if (this.state.profile.profilePicture === false
-      || this.state.profile.profilePicture === 'test.png') {
-      this.setState({
-        picStatus: false
-      })
-    } else {
+    
       let { id } = this.props.match.params
       const testVal = await updateProfile(id, this.state.profile)
-      if(Promise.resolve(testVal)){
+       await Promise.resolve(testVal).then(() => {
 
         this.props.history.push(`/profile/${id}`)
-      }
+
+       })
+
+      
   
     
       // this.props.history.push(`/profile/${id}`)
       // this.setState({ profile })
-    }
+    
   }
   render() {
     const profile = this.state.profile
