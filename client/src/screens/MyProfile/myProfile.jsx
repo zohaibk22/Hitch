@@ -92,7 +92,7 @@ class MyProfile extends Component {
               </div>
 
               <div className="right-profile">
-                <div className="profile-details-image"> <ProfilePic2 /> </div>
+                <div className="profile-details-image"> {profile.profilePicture}</div>
                 <div className="name-pic">
                   <div className="name">{profile.fullName}</div>
                   <div className="age">{profile.age}</div>

@@ -171,27 +171,24 @@ max-width: 700px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: start;
 
 }
 
-@media screen and (min-width: 355px){
-  {
-    width: 355px;
-    height: 838px;
-    background-color: #ffffff;
-  }
 
-  .div-left-profile{
-    width: 265px;
-    height: 24px;
-    font-family: OpenSans;
-    font-size: 16px;
-    font-weight: normal;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    color: #051d54;
-  }
 
+/* For mobile phones: */
+[class*="col-"] {
+  width: 100%;
+}
+
+@media only screen and (min-width: 600px) {
+  /* For tablets: */
+
+}
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .main{
+    width: 100px;
+  }
 }
