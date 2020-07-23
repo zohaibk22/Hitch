@@ -16,8 +16,6 @@ if (window.location.hostname === "localhost") {
 const api = axios.create({
   baseURL: apiUrl,
 });
-console.log(apiUrl);
-console.log(api.baseUrl);
 
 // put back baseUrl: apiUrl after if else works
 
