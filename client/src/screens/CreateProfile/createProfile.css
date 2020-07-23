@@ -118,12 +118,19 @@ input{
 @media only screen and (min-width: 376px) and (max-width: 1024px) {
   .create-profile-button{
     left: 0vh;
-    top: 2vh;
-    width: 75vw;
+    bottom: 0vh;
+    width: 60vw;
     /* height: 75px; */
     height:7vh;
-  
-  
+    margin: 0;
   }
+
+  .input-field{
+    width: 60vw;
+  } 
+
+  .heading {
+    font-size: 5vh;
+}
   
 }

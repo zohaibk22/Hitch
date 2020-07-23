@@ -21,9 +21,11 @@
 }
 
 .create-account{
+  position: relative;
     border-left: 2px solid green;
     height: 50vh;
     padding: 5vh;
+    top: 5vh;
 
 }
 
