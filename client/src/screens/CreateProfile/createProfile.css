@@ -1,0 +1,136 @@
+.create-user-container {
+  position: relative;
+    border-right: 40px solid #ddf3f5;
+    border-left: 40px solid #ddf3f5;
+     height: 75vh;
+}
+
+.create-user-account {
+  position: absolute;
+  left: 5vh;
+  top: 13vh;
+}
+
+
+
+.create-profile-button{
+  position: relative;
+  width: 18vw;
+  /* height: 75px; */
+  height:4.5vh;
+  border-radius: 10px;
+  background-color: #e96e2d;
+}
+
+.heading {
+    position: relative;
+    top: 5vh;
+    left: 5vh;
+     /* width: 1000px; */
+     width: 45vw;
+    /* height: 95px; */
+    height: 4vh;
+    font-family: OpenSans;
+    /* font-size: 64px; */
+    font-size: 4vh;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #0ca09a;
+    margin: 0;
+}
+
+input{
+    display: block;
+}
+
+.input-field{
+  /* width: 782px; */
+  width: 40vw;
+  /* height: 75px; */
+  height: 4.5vh;
+  border-radius: 10px;
+  border: solid 2px #c4c4c4;
+  background-color: #ffffff;
+
+}
+
+.input-field:focus {
+  border-color: #e96e2d;
+}
+
+.error-message {
+  color: red;
+  font-size: 1.5vh
+
+}
+
+@media only screen and (max-width: 375px) {
+  .create-user-container {
+    border: 13px solid #ddf3f5;
+    height: 75vh;
+  }
+  .heading {
+   position: relative;
+    top: 5vh;
+    left: 1vh;
+     width: 81vw;
+    height: 4vh;
+    font-family: OpenSans;
+    font-size: 3.7vh;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #0ca09a;
+    margin: 0;
+  }
+
+  .create-user-account {
+    position: absolute;
+    left: 1.3vh;
+  }
+
+  .input-field{
+  /* width: 782px; */
+    width: 75vw;
+    /* height: 75px; */
+
+
+  } 
+
+  .create-profile-button{
+    left: 0vh;
+    top: 2vh;
+    width: 85vw;
+    /* height: 75px; */
+    height:7vh;
+  
+  
+  }
+
+
+}
+
+@media only screen and (min-width: 376px) and (max-width: 1024px) {
+  .create-profile-button{
+    left: 0vh;
+    bottom: 0vh;
+    width: 60vw;
+    /* height: 75px; */
+    height:7vh;
+    margin: 0;
+  }
+
+  .input-field{
+    width: 60vw;
+  } 
+
+  .heading {
+    font-size: 5vh;
+}
+  
+}

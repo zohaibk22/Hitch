@@ -1,0 +1,18 @@
+main {
+  left: 0;
+  right: 0;
+  border-left: 40px solid #e1f2f1;
+  border-right: 40px solid #e1f2f1;
+  margin-top: 0;
+  padding-bottom: 228px;
+  z-index: 0;
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 500px) {
+  main {
+    left: 0;
+    right: 0;
+    border: 10px solid #e1f2f1;
+  }
+}

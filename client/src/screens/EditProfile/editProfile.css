@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700');
+input {
+  margin-top: 4px;
+  margin-bottom: 28px;
+  border: 2px solid lightgray;
+  background-color: #ffffff;
+  width: 343px;
+  height: 58px;
+  border-radius: 10px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 24px;
+  color: #051d54;
+  padding: 7px 15.9px 6px 11.4px;
+}
+input:focus{
+  border-color: rgb(243, 111, 58);
+  outline: none
+}
+label {
+  width: 378px;
+  height: 60px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  color: rgb(77, 86, 114);
+}
+.formC {
+  display: flex;
+  flex-direction: row;
+  margin-left: 81px;
+}
+.formItem {
+  margin-right: 30px;
+}
+.bio {
+  display: flex;
+  flex-direction: column;
+}
+textarea {
+  width: 754px;
+  height: 165px;
+  border-radius: 10px;
+  border: 2px solid lightgray;
+  background-color: #ffffff;
+  resize: none;
+  margin-top: -22px;
+  padding: 17px 10px 14px 18px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 24px;
+  color: #051d54;
+  resize: none;
+  margin-bottom: 28px;
+}
+textarea:focus {
+  border-color: rgb(243, 111, 58);
+  outline: none
+}
+@media (max-width: 500px) {
+  input {
+    width: 311px;
+    height: 31px;
+    border-radius: 5px;
+    font-size: 16px;
+    padding: 8px 0px 7px 10px;
+  }
+  label {
+    width: 325px;
+    height: 24px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: rgb(77, 86, 114);
+  }
+  .bioL {
+    margin-top: -50px;
+    margin-bottom: 24px;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 2%;
+    margin-top: 206px;
+  }
+  textarea {
+    width: 311px;
+    height: 131px;
+    border-radius: 5px;
+    font-size: 16px;
+    padding: 8px 0px 7px 10px;
+    margin-left: 0;
+  }
+  .plusSvg {
+    margin-left: 40px;
+    margin-top: -25px;
+  }
+  .formC {
+    margin-left: 6%;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+  }
+  .formItem {
+    margin-bottom: -9px;
+  }
+  .bio {
+    margin-left: -5%;
+    margin-top: 50px;
+    margin-bottom: -9px;
+  }
+  .smokeSvg {
+    margin-left: 7px;
+  }
+  .plusSvgSmoke {
+    margin-top: -70px;
+    margin-left: 40px;
+  }
+  .check {
+    margin-top: -28px;
+    margin-left: 50px;
+  }
+}
+@media (max-width: 349px) {
+  input {
+    width: 225px;
+    height: 25px;
+    border-radius: 5px;
+    font-size: 16px;
+    padding: 8px 0px 7px 10px;
+  }
+  textarea {
+    width: 225px;
+    height: 131px;
+    border-radius: 5px;
+    font-size: 16px;
+    padding: 8px 0px 7px 10px;
+    margin-left: 100px;
+  }
+  .bioL {
+    margin-left: 100px;
+  }
+  .check {
+    margin-top: -28px;
+    margin-left: 100px;
+  }
+} 
+

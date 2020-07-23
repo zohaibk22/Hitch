@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700');
+.titleOne {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 64px;
+  font-weight: bold;
+  margin-bottom: 24px;
+  margin-left: 85px;
+  margin-top: 0;
+  align-self: flex-start;
+  padding-top: 78px;
+  color: rgb(0, 160, 154);
+}
+
+@media (max-width: 500px) {
+  .titleOne {
+    font-size: 32px;
+    margin: -61px 0 0 0;
+  }
+}
+
