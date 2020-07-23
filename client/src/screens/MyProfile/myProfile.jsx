@@ -57,13 +57,13 @@ class MyProfile extends Component {
     }
   
 
-  // async componentDidMount() {
-  //   let { id } = this.props.match.params
-  //   const res = await axios(`https://hitch-account-info.herokuapp.com/api/profile/${id}`)
-  //   console.log(res.data)
-  //   const profile = res.data
-  //   this.setState({ profile })
-  // }
+  async componentDidMount() {
+    let { id } = this.props.match.params
+    const res = await axios(`https://hitch-account-info.herokuapp.com/api/profile/${id}`)
+    console.log(res.data)
+    const profile = res.data
+    this.setState({ profile })
+  }
 
 
 
@@ -83,8 +83,10 @@ class MyProfile extends Component {
                 <h2 className="bio-head">Bio</h2>
                 <div className="profile-bio">{profile.bio}</div>
                 <h2 className="recentReview">Most Recent Review</h2>
-                <div className="review-text">"{profile.recentReview}"</div>
+                <div className="review-text">{profile.recentReview}</div>
                 <h2 className="travel-pref">Travel Preferences</h2>
+                <h2 className="amenities">Amenities</h2>
+                <div className="amenities-svg">{profile.amenities}</div>
                 <div className="button-container">
                   <Link to={`/profile/update/${id}`} ><UpdateProfileButton /></Link>
                   <h2 className="remove-account">Want to remove your account?</h2>
