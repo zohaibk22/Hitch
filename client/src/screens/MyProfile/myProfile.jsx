@@ -84,9 +84,12 @@ class MyProfile extends Component {
                 <div className="profile-bio">{profile.bio}</div>
                 <h2 className="recentReview">Most Recent Review</h2>
                 <div className="review-text">{profile.recentReview}</div>
+                <p>No Recent Reviews</p>
                 <h2 className="travel-pref">Travel Preferences</h2>
+                <p>{profile.travelPref}</p>
                 <h2 className="amenities">Amenities</h2>
-                <div className="amenities-svg">{profile.amenities}</div>
+                <div className="amenities-svg">{profile.smokeFree}</div>
+                <div className="amenities-svg">{profile.snacks}</div>
                 <div className="button-container">
                   <Link to={`/profile/update/${id}`} ><UpdateProfileButton /></Link>
                   <h2 className="remove-account">Want to remove your account?</h2>
