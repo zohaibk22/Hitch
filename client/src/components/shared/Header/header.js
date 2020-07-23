@@ -8,7 +8,7 @@ function Header(props) {
       <a href="/">
         <p className="logo">Hitch</p>
       </a>
-      {/* <ul>
+      <ul>
         <li className="one">Find My Ride</li>
         <li className="two">About Us</li>
         <li className="three">Contact Us</li>
@@ -18,7 +18,7 @@ function Header(props) {
         <li className="five">
           <a href="/signin">Sign in</a>
         </li>
-      </ul> */}
+      </ul>
     </header>
   );
 }

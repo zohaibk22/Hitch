@@ -18,7 +18,7 @@ header {
   color: #ffffff;
   text-decoration: none;
 }
-/* ul {
+ul {
   display: flex;
   flex-direction: row;
   margin-left: -21px;
@@ -46,16 +46,15 @@ li {
 .four {
   margin-right: 50px;
 
-  margin-bottom: 55px; 
-  
+  margin-bottom: 55px;
 }
 .four:visited{
   color: red
-}*/
+}
 a {
   text-decoration: none;
-  /* display: flex;
-  align-items: flex-start; */
+  display: flex;
+  align-items: flex-start;
 }
 @media (max-width: 500px) {
   header {
