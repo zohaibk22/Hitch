@@ -9,6 +9,8 @@ import { getProfile, updateProfile } from "../../services/profile"
 import UpdateProfileButton from '../../components/MyProfile/Button/updateButton'
 import DeactivatePopUp from '../../components/MyProfile/DeactivatePopUp/DeactivatePopUp'
 import { deleteProfile } from "../../services/profile";
+import ProfilePic2 from '../../components/MyProfile/ProfilePic/ProfilePic2'
+
 class MyProfile extends Component {
   constructor(props) {
     super(props) 
@@ -90,7 +92,7 @@ class MyProfile extends Component {
               </div>
 
               <div className="right-profile">
-                <img className="profile-details-image" src={profile.imgUrl} alt={profile.fullName} />
+                <div className="profile-details-image"> <ProfilePic2 /> </div>
                 <div className="name-pic">
                   <div className="name">{profile.fullName}</div>
                   <div className="age">{profile.age}</div>
