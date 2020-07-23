@@ -33,7 +33,6 @@ label {
   margin-right: 30px;
 }
 .bio {
-  margin-left: 81px;
   display: flex;
   flex-direction: column;
 }
@@ -56,7 +55,7 @@ textarea:focus {
   border-color: rgb(243, 111, 58);
   outline: none
 }
-@media (max-width: 500px), (min-width: 350px) {
+@media (max-width: 500px) {
   input {
     width: 311px;
     height: 31px;
@@ -120,6 +119,29 @@ textarea:focus {
     margin-top: -28px;
     margin-left: 50px;
   }
-
 }
+@media (max-width: 349px) {
+  input {
+    width: 225px;
+    height: 25px;
+    border-radius: 5px;
+    font-size: 16px;
+    padding: 8px 0px 7px 10px;
+  }
+  textarea {
+    width: 225px;
+    height: 131px;
+    border-radius: 5px;
+    font-size: 16px;
+    padding: 8px 0px 7px 10px;
+    margin-left: 100px;
+  }
+  .bioL {
+    margin-left: 100px;
+  }
+  .check {
+    margin-top: -28px;
+    margin-left: 100px;
+  }
+} 
 

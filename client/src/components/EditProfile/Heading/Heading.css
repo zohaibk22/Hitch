@@ -4,19 +4,22 @@
   font-size: 64px;
   font-weight: bold;
   margin-bottom: 24px;
-  margin-left: 88px;
+  margin-left: 85px;
   margin-top: 0;
+  align-self: flex-start;
   padding-top: 78px;
   color: rgb(0, 160, 154);
 }
-@media (max-width: 500px), (min-width: 350px) {
+@media (max-width: 500px) {
   .titleOne {
-    font-family: 'Open Sans', sans-serif;
     font-size: 32px;
-    font-weight: 600;
-    font-weight: bold;
     margin: -61px 0 0 0;
-    color: rgb(0, 160, 154);
+  }
+}
+@media (max-width: 349px) {
+  .titleOne {
+    font-size: 22px;
+    margin: -61px 0 0 0;
   }
 }
 
