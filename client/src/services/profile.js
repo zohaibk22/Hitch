@@ -1,13 +1,13 @@
 import api from "./apiConfig";
 
-export const getProfiles = async () => {
-  try {
-    const response = await api.get("/profiles");
-    return response.data;
-  } catch (error) {
-    throw error;
-  }
-};
+// export const getProfiles = async () => {
+//   try {
+//     const response = await api.get("/profiles");
+//     return response.data;
+//   } catch (error) {
+//     throw error;
+//   }
+// };
 
 export const getProfile = async (id) => {
   try {

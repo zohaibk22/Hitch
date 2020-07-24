@@ -37,13 +37,13 @@ class Login extends Component {
 
          e.preventDefault();
         let {profile, signIn, account } = this.state;
-        const data = await getProfiles(this.state.profile)
-        console.log(data);
+        // const data = await getProfiles(this.state.profile)
+        // console.log(data);
 
 
-        this.setState({
-            account: data
-        })
+        // this.setState({
+        //     account: data
+        // })
     }
 
 
