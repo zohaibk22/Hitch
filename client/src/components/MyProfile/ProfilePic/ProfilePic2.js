@@ -59,7 +59,7 @@ class ProfilePic2 extends Component {
     const pic = this.state.profilePicture
     return (
       <>
-        <button className='circle'
+        <button className='circle1'
           onClick={this.handleOpen}>
           <div className='head'></div>
           <div className='shoulder'></div>
@@ -72,13 +72,13 @@ class ProfilePic2 extends Component {
           </div>
         </button>
         {pic ?
-          <div className='circleTwo'
+          <div className='circle2'
             style={{
               backgroundImage: `url(${pic})`
             }}>
           </div>
           :
-          <div className='circleTwo'
+          <div className='circle3'
             style={{
               background: 'transparent'
             }}>

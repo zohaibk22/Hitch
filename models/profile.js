@@ -18,6 +18,7 @@ const Profile = new Schema(
     smokeFree: { type: Boolean, required: false },
     snacks: { type: Boolean, required: false },
     active: { type: Boolean, required: false },
+    music: { type: String, required: false },
   },
 
   { timestamps: true }

@@ -10,7 +10,7 @@ import UpdateProfileButton from '../../components/MyProfile/Button/updateButton'
 import DeactivatePopUp from '../../components/MyProfile/DeactivatePopUp/DeactivatePopUp'
 import { deleteProfile } from "../../services/profile";
 import ProfilePic2 from '../../components/MyProfile/ProfilePic/ProfilePic2'
-
+import SvgIcons from '../../components/shared/SVGIcons/SvgIcons'
 
 class MyProfile extends Component {
   constructor(props) {
@@ -83,13 +83,22 @@ class MyProfile extends Component {
                 <h2 className="bio-head">Bio</h2>
                 <div className="profile-bio">{profile.bio}</div>
                 <h2 className="recentReview">Most Recent Review</h2>
-                <div className="review-text">{profile.recentReview}</div>
-                <p>No Recent Reviews</p>
-                <h2 className="travel-pref">Travel Preferences</h2>
-                <p>{profile.travelPref}</p>
+                <div className="review-text">No Recent Reviews Available</div>
                 <h2 className="amenities">Amenities</h2>
-                <div className="amenities-svg">{profile.smokeFree}</div>
-                <div className="amenities-svg">{profile.snacks}</div>
+                <SvgIcons name='music'
+                width={39}
+                fill='#051d54' />
+                <h2 className="amenMusic">{profile.music}</h2>
+                <SvgIcons name='smoke'
+                width={100}
+                fill='#051d54'
+                className='smokeSvg'/>
+                <div className="amenities-svg">Smoke Free</div>
+                <SvgIcons name='snack'
+                width={30}
+                fill='#051d54'
+                className='snackSvg'/>
+                <div className="amenities-svg">Snacks Welcome</div>
                 <div className="button-container">
                   <Link to={`/profile/update/${id}`} ><UpdateProfileButton /></Link>
                   <h2 className="remove-account">Want to remove your account?</h2>
@@ -98,7 +107,7 @@ class MyProfile extends Component {
               </div>
 
               <div className="right-profile">
-                <div className="profile-details-image"> {profile.profilePicture}</div>
+                <div className="ProfilePic2"> <ProfilePic2/> </div>
                 <div className="name-pic">
                   <div className="name">{profile.fullName}</div>
                   <div className="age">{profile.age}</div>
