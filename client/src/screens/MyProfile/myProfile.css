@@ -89,7 +89,7 @@
 }
 
 .review-text{
-  height: 108px;
+  /* height: 108px; */
   font-family: 'Open Sans', sans-serif;
   font-size: 24px;
   font-weight: normal;
@@ -279,7 +279,7 @@ word-break: break-all;
 }
 
 .amenMusic{
-  height: 108px;
+ 
   font-family: 'Open Sans', sans-serif;
   font-size: 24px;
   font-weight: normal;
@@ -291,7 +291,7 @@ word-break: break-all;
 }
 
 .amenities-svg{
-  height: 108px;
+ 
   font-family: 'Open Sans', sans-serif;
   font-size: 24px;
   font-weight: normal;
@@ -329,3 +329,31 @@ word-break: break-all;
   color: #051d54;
   align-content: center;
 }
+/* 
+.smokeSvg{
+ 
+    
+    font-family: 'Open Sans', sans-serif;
+    font-size: 24px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #051d54;
+  
+}
+
+.snackSvg{
+  
+    
+    font-family: 'Open Sans', sans-serif;
+    font-size: 24px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #051d54;
+  
+} */

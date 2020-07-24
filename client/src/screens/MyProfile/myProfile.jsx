@@ -7,10 +7,10 @@ import Header from '../../components/shared/Header/header'
 import Footer from '../../components/shared/Footer/footer'
 import { getProfile, updateProfile } from "../../services/profile"
 import UpdateProfileButton from '../../components/MyProfile/Button/updateButton'
+import DeactivatePopUp from '../../components/MyProfile/DeactivatePopUp/DeactivatePopUp'
 import { deleteProfile } from "../../services/profile";
 import ProfilePic2 from '../../components/MyProfile/ProfilePic/ProfilePic2'
 import SvgIcons from '../../components/shared/SVGIcons/SvgIcons'
-
 
 class MyProfile extends Component {
   constructor(props) {
@@ -86,21 +86,21 @@ class MyProfile extends Component {
                 <div className="review-text">No Recent Reviews Available</div>
                 <h2 className="travel-pref">Travel Preferences</h2>
                 <div className="travel-container">
-                    <div className="musicIcon"><SvgIcons name='music'
-                  width={50}
-                  fill='#051d54' /></div>
-                  <h2 className="amenMusic">{profile.music}</h2>
-                  <div className="smokeIcon"><SvgIcons name='smoke'
-                  width={150}
-                  fill='#051d54'
-                  className='smokeSvg'/></div>
-                  <div className="amenities-svg">Smoke Free</div>
-                  <div className="SnackIcon"><SvgIcons name='snack'
-                  width={50}
-                  fill='#051d54'
-                  className='snackSvg'/></div>
+                <SvgIcons name='music'
+                width={39}
+                fill='#051d54' />
+                <h2 className="amenMusic">{profile.music}</h2>
+                <SvgIcons name='smoke'
+                width={100}
+                fill='#051d54'
+                className='smokeSvg'/>
+                <div className="amenities-svg">Smoke Free</div>
+                <SvgIcons name='snack'
+                width={30}
+                fill='#051d54'
+                className='snackSvg'/>
                   <div className="amenities-svg">Snacks Welcome</div>
-                </div>
+                  </div>
                 <div className="button-container">
                   <Link to={`/profile/update/${id}`} ><UpdateProfileButton /></Link>
                   <h2 className="remove-account">Want to remove your account?</h2>
@@ -110,9 +110,8 @@ class MyProfile extends Component {
 
               <div className="right-profile">
                 <div className="ProfilePic2"> <ProfilePic2/> </div>
-                <div className="name">{profile.fullName}</div>
                 <div className="name-pic">
-                  <br/>
+                  <div className="name">{profile.fullName}</div>
                   <div className="age">{profile.age}</div>
                   <div className="hometown">{profile.homeTown}</div>
                   <div className="school">{profile.school}</div>
