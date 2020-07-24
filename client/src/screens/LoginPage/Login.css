@@ -4,50 +4,74 @@
     justify-content: space-evenly;
     border-right: 40px solid #ddf3f5;
     border-left: 40px solid #ddf3f5;
-     height: 75vh;
+     height: 65vh;
+}
+
+.signin-option-container{
+  margin: 0px 50px;
+}
+
+
+.signin-form{
+  position: relative;
+  top:5vh;
 }
 
 .signin-header {
-     width: 1000px;
-    height: 95px;
+    position: relative;
+    top: 4vh;
+     width: 40vw;
+    height: 10vh;
     font-family: OpenSans;
-    font-size: 64px;
+    font-size: 6vh;;
     font-weight: bold;
     font-stretch: normal;
     font-style: normal;
     line-height: normal;
     letter-spacing: normal;
     color: #0ca09a;
+    margin:0px
+}
+
+.input-field-signin {
+  width: 55vw;
+}
+
+.signin-button{
+  position: relative;
+  display: block;
+  margin: 0px;
+  top: 3vh;
 }
 
 .create-account{
   position: relative;
-    border-left: 2px solid green;
-    height: 50vh;
+    border-left: 2px solid grey;
+    height: 30vh;
     padding: 5vh;
-    top: 5vh;
+    top: 10vh;
+    text-align: center;
 
 }
 
 
 .create-account-link{
-  width: 276px;
+  width: 25vw;;
   height: 33px;
   font-family: OpenSans;
-  font-size: 24px;
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
   line-height: normal;
   letter-spacing: normal;
   color: #ea6e2d;
+  margin:0
 }
 
 .create-account-header{
-  width: 276px;
+  width: 25vw;;
   height: 33px;
   font-family: OpenSans;
-  font-size: 24px;
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;
@@ -58,5 +82,135 @@
 }
 .combination{
      position: relative;
+     top: 10vh;
+     font-size: 2vh;
 }
 
+.desktop-view {
+  display: none;
+}
+
+@media only screen and (max-width: 375px) {
+
+  .main-login-container{
+    display: block;
+    border-right: 15px solid #ddf3f5;
+    border-left: 15px solid #ddf3f5;
+  }
+  .signin-button{
+    width: 85vw;
+    margin: 0px;
+    top: 3vh;
+    font-size: 2vh;
+    
+
+  } 
+
+  .signin-form{
+  margin: 0 1vh;
+  }
+
+  .signin-header {
+  width: 55vw;
+  margin: 0% 20%
+
+  }
+
+  .input-field-signin {
+    width: 80vw;
+    height: 4vh;
+  }
+
+  .create-account {
+    display: none;
+  }
+
+
+.create-account-link{
+  width: 25vw;;
+  height: 33px;
+  font-family: OpenSans;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ea6e2d;
+  margin:0
+}
+
+.create-account-header{
+  width: 25vw;;
+  height: 33px;
+  font-family: OpenSans;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #051d54;
+
+  } 
+  .combination{
+     position: relative;
+     top: 10vh;
+     font-size: 1.7vh;
+     display: none;
+  }
+
+  .signin-option-container{
+  margin: 0px 0px;
+  }
+
+  .desktop-view {
+  display: block;
+  margin: 0px;
+  }
+
+  .create-account-header-desktop{
+
+  height: 20px;
+  font-family: OpenSans;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #051d54
+
+  }
+
+  .create-account-link-desktop {
+
+  height: 20px;
+  font-family: OpenSans;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ea6e2d;
+  margin:0
+
+  }
+
+
+  .combination-desktop{
+    position: relative;
+    font-size: 2vh;
+    top: 5vh;
+    width: 50vw;
+    margin: 0;
+    text-align: center;
+    left: 6vh;
+    
+  }
+
+
+
+}
+
+@media only screen and (min-width: 376px) and (max-width: 1024px) {
+  
+  
+}

@@ -47,6 +47,9 @@
   line-height: normal;
   letter-spacing: normal;
   color: #051d54;
+  width: 350px;
+  
+  
 }
 
 .travel-pref {
@@ -86,6 +89,19 @@
   color: #0ca09a;
 }
 
+.review-text{
+  /* height: 108px; */
+  font-family: 'Open Sans', sans-serif;
+  font-size: 24px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #051d54;
+  margin-bottom: 25px;
+ 
+}
 
 .profile-container {
  display: flex;
@@ -101,12 +117,13 @@ flex-direction: column;
 justify-content: space-between;
 align-items: flex-start;
 max-width: 700px;
+word-break: break-all;
 }
 .right-profile{
   display: flex;
   flex-direction: column;
-  /* justify-content: flex-end; */
   align-items: center;
+  align-content: flex-start;
   min-height: 600px;
   max-width: 300px;
 }
@@ -114,7 +131,7 @@ max-width: 700px;
 .name-pic {
   order: 0;
   flex: 0 1 auto;
-  align-self: flex-end;
+  align-self: center;
   height: 170px;
   font-family: 'Open Sans', sans-serif;
   font-size: 24px;
@@ -125,6 +142,7 @@ max-width: 700px;
   letter-spacing: normal;
   color: #051d54;
   align-content: center;
+  text-align: center;
   
 }
 
@@ -164,6 +182,7 @@ max-width: 700px;
   letter-spacing: normal;
   color: #051d54;
   text-align: center;
+  margin-top: 100px;
 }
 
 .remove-button{
@@ -228,6 +247,7 @@ max-width: 700px;
     letter-spacing: normal;
     color: #ea6e2d;
     text-align: center;
+    padding-left: 65px;
   }
 
   .a{
@@ -257,4 +277,79 @@ max-width: 700px;
   max-width: 300px;
 }
 
+
 }
+
+.amenMusic{
+ 
+  font-family: 'Open Sans', sans-serif;
+  font-size: 24px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #051d54;
+}
+
+.amenities-svg{
+ 
+  font-family: 'Open Sans', sans-serif;
+  font-size: 24px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #051d54;
+}
+
+.travel-container{
+  display: flex;
+  flex-direction: column;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  height: 250px;
+  justify-content: space-around;
+
+}
+
+.name{
+  /* width: 378px; */
+  /* height: 37px; */
+  /* order: 0; */
+  /* flex: 0 1 auto; */
+  align-self: center;
+  /* height: 378px; */
+  font-family: 'Open Sans', sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #051d54;
+  align-content: center;
+}
+
+.smokeSvg{
+ 
+    
+ 
+  
+}
+/*
+.snackSvg{
+  
+    
+    font-family: 'Open Sans', sans-serif;
+    font-size: 24px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #051d54;
+  
+} */

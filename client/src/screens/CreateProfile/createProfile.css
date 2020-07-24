@@ -6,7 +6,7 @@
 }
 
 .create-user-account {
-  position: absolute;
+  position: relative;
   left: 5vh;
   top: 13vh;
 }
@@ -16,7 +16,6 @@
 .create-profile-button{
   position: relative;
   width: 18vw;
-  /* height: 75px; */
   height:4.5vh;
   border-radius: 10px;
   background-color: #e96e2d;
@@ -26,12 +25,9 @@
     position: relative;
     top: 5vh;
     left: 5vh;
-     /* width: 1000px; */
      width: 45vw;
-    /* height: 95px; */
     height: 4vh;
     font-family: OpenSans;
-    /* font-size: 64px; */
     font-size: 4vh;
     font-weight: bold;
     font-stretch: normal;
@@ -47,9 +43,8 @@ input{
 }
 
 .input-field{
-  /* width: 782px; */
+  
   width: 40vw;
-  /* height: 75px; */
   height: 4.5vh;
   border-radius: 10px;
   border: solid 2px #c4c4c4;
@@ -76,7 +71,7 @@ input{
    position: relative;
     top: 5vh;
     left: 1vh;
-     width: 81vw;
+    width: 83vw;
     height: 4vh;
     font-family: OpenSans;
     font-size: 3.7vh;
@@ -90,23 +85,23 @@ input{
   }
 
   .create-user-account {
-    position: absolute;
     left: 1.3vh;
+    top: -14vh;
   }
 
   .input-field{
-  /* width: 782px; */
     width: 75vw;
-    /* height: 75px; */
+    height: 5vh;
+    margin:0
+
 
 
   } 
 
   .create-profile-button{
-    left: 0vh;
+    left: -1vh;
     top: 2vh;
     width: 85vw;
-    /* height: 75px; */
     height:7vh;
   
   
@@ -130,7 +125,9 @@ input{
   } 
 
   .heading {
-    font-size: 5vh;
-}
+    font-size: 4vh;
+    width: 80vw;
+
+  }
   
 }

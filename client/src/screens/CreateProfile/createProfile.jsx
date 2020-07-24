@@ -116,15 +116,7 @@ class CreateProfile extends Component {
    
   render() {
     const { profile, created } = this.state;
-  
 
-
-
-    // if(created) { 
-
-    //   return <Redirect to={`/profile/update/,nkjfnkjn`} />
-
-    // }
 
 
     return (
