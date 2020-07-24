@@ -59,18 +59,7 @@ class ProfilePic2 extends Component {
     const pic = this.state.profilePicture
     return (
       <>
-        <button className='circle1'
-          onClick={this.handleOpen}>
-          <div className='head'></div>
-          <div className='shoulder'></div>
-          <div className='cameraC'>
-            <div style={styles}>
-              <SvgIcons name='camera'
-                width={39}
-                fill='#051d54' />
-            </div>
-          </div>
-        </button>
+
         {pic ?
           <div className='circle2'
             style={{
