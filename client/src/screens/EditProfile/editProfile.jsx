@@ -177,7 +177,7 @@ class EditProfile extends Component {
                   onChange={this.handleChange}></input>
               </div>
             </div>
-            <SvgIcons name='snack'
+            {/* <SvgIcons name='snack'
               width={30}
               fill='#051d54'
               className='snackSvg' />
@@ -195,7 +195,7 @@ class EditProfile extends Component {
               type='checkbox'
               id='smoke'
               name='smoke'
-              className='checkOne'></input>
+              className='checkOne'></input> */}
             <CreateProfileButton />
           </form>
         </Main>
