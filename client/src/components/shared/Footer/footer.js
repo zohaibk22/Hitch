@@ -1,4 +1,5 @@
 import React from 'react';
+import SvgIcons from '../SVGIcons/SvgIcons'
 import './footer.css'
 
 function Footer(props) {

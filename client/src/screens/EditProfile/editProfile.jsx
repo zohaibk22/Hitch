@@ -182,7 +182,7 @@ class EditProfile extends Component {
             <input
               type='checkbox'
               name='snacks'
-              className='check'></input>
+              className='checkOne'></input>
             <SvgIcons name='smoke'
               width={100}
               fill='#051d54'
@@ -192,7 +192,7 @@ class EditProfile extends Component {
               type='checkbox'
               id='smoke'
               name='smoke'
-              className='check'></input>
+              className='checkOne'></input>
             <CreateProfileButton />
           </form>
         </Main>

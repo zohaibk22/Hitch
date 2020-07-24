@@ -7,7 +7,7 @@ function Header(props) {
   return (
     <header>
       <a href="/">
-        <SvgIcons
+      <SvgIcons
           name='logo'
           width={125}
           fill='#FFFFFF'
