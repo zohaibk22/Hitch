@@ -178,6 +178,7 @@ max-width: 700px;
   letter-spacing: normal;
   color: #051d54;
   text-align: center;
+  margin-top: 100px;
 }
 
 .remove-button{
@@ -242,6 +243,7 @@ max-width: 700px;
     letter-spacing: normal;
     color: #ea6e2d;
     text-align: center;
+    padding-left: 65px;
   }
 
   .a{
