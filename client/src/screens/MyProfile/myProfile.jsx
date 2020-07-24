@@ -7,10 +7,10 @@ import Header from '../../components/shared/Header/header'
 import Footer from '../../components/shared/Footer/footer'
 import { getProfile, updateProfile } from "../../services/profile"
 import UpdateProfileButton from '../../components/MyProfile/Button/updateButton'
-import DeactivatePopUp from '../../components/MyProfile/DeactivatePopUp/DeactivatePopUp'
 import { deleteProfile } from "../../services/profile";
 import ProfilePic2 from '../../components/MyProfile/ProfilePic/ProfilePic2'
 import SvgIcons from '../../components/shared/SVGIcons/SvgIcons'
+
 
 class MyProfile extends Component {
   constructor(props) {
@@ -110,8 +110,9 @@ class MyProfile extends Component {
 
               <div className="right-profile">
                 <div className="ProfilePic2"> <ProfilePic2/> </div>
+                <div className="name">{profile.fullName}</div>
                 <div className="name-pic">
-                  <div className="name">{profile.fullName}</div>
+                  <br/>
                   <div className="age">{profile.age}</div>
                   <div className="hometown">{profile.homeTown}</div>
                   <div className="school">{profile.school}</div>

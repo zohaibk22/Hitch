@@ -130,7 +130,7 @@ word-break: break-all;
 .name-pic {
   order: 0;
   flex: 0 1 auto;
-  /* align-self: flex-end; */
+  align-self: center;
   height: 170px;
   font-family: 'Open Sans', sans-serif;
   font-size: 24px;
@@ -310,4 +310,22 @@ word-break: break-all;
   align-content: flex-start;
   height: 250px;
 
+}
+
+.name{
+  /* width: 378px; */
+  /* height: 37px; */
+  /* order: 0; */
+  /* flex: 0 1 auto; */
+  align-self: center;
+  /* height: 378px; */
+  font-family: 'Open Sans', sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #051d54;
+  align-content: center;
 }
