@@ -18,11 +18,9 @@
 }
 
 .signin-header {
-  position: relative;
-  top: 4vh;
-     /* width: 1000px; */
+    position: relative;
+    top: 4vh;
      width: 40vw;
-    /* height: 95px; */
     height: 10vh;
     font-family: OpenSans;
     font-size: 6vh;;
@@ -115,8 +113,6 @@
   .signin-header {
   width: 55vw;
   margin: 0% 20%
-  
-  
 
   }
 
@@ -170,6 +166,47 @@
   display: block;
   margin: 0px;
   }
+
+  .create-account-header-desktop{
+
+  height: 20px;
+  font-family: OpenSans;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #051d54
+
+  }
+
+  .create-account-link-desktop {
+
+  height: 20px;
+  font-family: OpenSans;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ea6e2d;
+  margin:0
+
+  }
+
+
+  .combination-desktop{
+    position: relative;
+    font-size: 2vh;
+    top: 5vh;
+    width: 50vw;
+    margin: 0;
+    text-align: center;
+    left: 6vh;
+    
+  }
+
+
 
 }
 
