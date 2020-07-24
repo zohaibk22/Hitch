@@ -46,8 +46,9 @@
   font-style: normal;
   line-height: normal;
   letter-spacing: normal;
-  margin-bottom: 25px;
+  margin: auto;
   color: #051d54;
+  
 }
 
 .travel-pref {
@@ -302,6 +303,16 @@ max-width: 700px;
 
 .travel-container{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
 
+.parent {
+display: flex;
+flex-wrap: wrap;
+align-content: flex-start;
+height: 250px;
+}
+
+.child {
+width: 40%;
+}
 }

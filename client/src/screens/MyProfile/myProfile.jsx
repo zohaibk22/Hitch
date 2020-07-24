@@ -86,19 +86,19 @@ class MyProfile extends Component {
                 <div className="review-text">No Recent Reviews Available</div>
                 <h2 className="travel-pref">Travel Preferences</h2>
                 <div className="travel-container">
-                  <SvgIcons name='music'
-                  width={39}
-                  fill='#051d54' />
+                    <div className="musicIcon"><SvgIcons name='music'
+                  width={50}
+                  fill='#051d54' /></div>
                   <h2 className="amenMusic">{profile.music}</h2>
-                  <SvgIcons name='smoke'
-                  width={100}
+                  <div className="smokeIcon"><SvgIcons name='smoke'
+                  width={150}
                   fill='#051d54'
-                  className='smokeSvg'/>
+                  className='smokeSvg'/></div>
                   <div className="amenities-svg">Smoke Free</div>
-                  <SvgIcons name='snack'
-                  width={30}
+                  <div className="SnackIcon"><SvgIcons name='snack'
+                  width={50}
                   fill='#051d54'
-                  className='snackSvg'/>
+                  className='snackSvg'/></div>
                   <div className="amenities-svg">Snacks Welcome</div>
                 </div>
                 <div className="button-container">
