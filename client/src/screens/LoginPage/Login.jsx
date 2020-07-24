@@ -56,12 +56,13 @@ class Login extends Component {
             
                 <Layout>
                 <div className = "main-login-container">
-                    <div className="sign-in-option-container">
+                    <div className="signin-option-container">
                         <h1 className="signin-header">Sign In</h1>
-                        <form onSubmit={this.handleSubmit}>
+                        <form className="signin-form" onSubmit={this.handleSubmit}>
                             <label>School Email:</label>
 
                             <input type="text"
+                            className = "input-field-signin"
                             onChange={this.handleChange}
                             name="emailAddress"
                             value={profile.emailAddress}
@@ -69,7 +70,8 @@ class Login extends Component {
 
                             <label>Password:</label>
 
-                            <input type="password"  
+                            <input type="password" 
+                            className = "input-field-signin" 
                             name="password"
                             value={profile.password}
                             onChange={this.handleChange}
@@ -77,7 +79,12 @@ class Login extends Component {
                     
                             <label>Forgot Password?</label>
 
-                        <button>Sign In</button>
+                        <button className = "signin-button">Sign In</button>
+
+                        <div className="desktop-view">
+                        <p className="create-account-header combination">Do you have an Account?</p>
+                        <Link  to="/create/profile"><p className ="create-account-link combination">Create an Account</p></Link>
+                        </div>
                         </form>
                     </div>
                     <div className="create-account">
