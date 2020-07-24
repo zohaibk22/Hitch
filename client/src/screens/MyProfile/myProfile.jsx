@@ -33,7 +33,12 @@ class MyProfile extends Component {
   async componentDidMount() {
     let { id } = this.props.match.params
     const res = await getProfile(id)
+
     console.log(res.data)
+
+    //debugger
+    console.log(res)
+    //debugger
     const profile = res;
     this.setState({ profile })
     console.log(this.state)

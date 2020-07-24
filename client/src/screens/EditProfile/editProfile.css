@@ -112,10 +112,10 @@ textarea:focus {
     margin-left: 7px;
   }
   .plusSvgSmoke {
-    margin-top: -70px;
+    margin-top: -80px;
     margin-left: 40px;
   }
-  .check {
+  .checkOne {
     margin-top: -28px;
     margin-left: 50px;
   }
@@ -139,9 +139,9 @@ textarea:focus {
   .bioL {
     margin-left: 100px;
   }
-  .check {
+  .checkOne {
     margin-top: -28px;
-    margin-left: 100px;
+    margin-left: 30px;
   }
-} 
+}
 

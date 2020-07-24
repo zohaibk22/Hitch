@@ -25,6 +25,9 @@ class EditProfile extends Component {
         age: '',
         recentReview: '',
         hometown: '',
+        travelPref: '',
+        smokeFree: '',
+        snacks: '',
         active: true,
       },
       picStatus: true,
@@ -60,17 +63,9 @@ class EditProfile extends Component {
   }
   handleSubmit = async (event) => {
     event.preventDefault()
-    if (this.state.profile.profilePicture === false
-      || this.state.profile.profilePicture === 'test.png') {
-      this.setState({
-        picStatus: false
-      })
-    } else {
-      let { id } = this.props.match.params
-      await updateProfile(id, this.state.profile)
-      this.props.history.push(`/profile/${id}`)
-      // this.setState({ profile })
-    }
+    let { id } = this.props.match.params
+    await updateProfile(id, this.state.profile)
+    this.props.history.push(`/profile/${id}`)
   }
   render() {
     const profile = this.state.profile
@@ -78,7 +73,7 @@ class EditProfile extends Component {
       <>
         <Header />
         <Main>
-        <Heading />
+          <Heading />
           <ProfilePic />
           {this.state.picStatus ? null : <PopUp />}
           <form className='editForm' onSubmit={this.handleSubmit}>
@@ -147,7 +142,7 @@ class EditProfile extends Component {
                 <label className='bioL'>Bio:</label>
                 <textarea
                   type='text'
-                 id='bio'
+                  id='bio'
                   name='bio'
                   className='bioInput'
                   defaultValue={profile.bio}
@@ -178,29 +173,29 @@ class EditProfile extends Component {
                   id='music'
                   name='music'
                   placeholder='Enter favorite music genres'
-                  defaultValue={profile.music}
+                  defaultValue={profile.travelPref}
                   onChange={this.handleChange}></input>
               </div>
             </div>
-            <SvgIcons name='snack'
-                width={30}
+            {/* <SvgIcons name='snack'
+              width={30}
               fill='#051d54'
-              className='snackSvg'/>
+              className='snackSvg' />
             <label className='plusSvg'>Snacks Welcome:</label>
             <input
               type='checkbox'
               name='snacks'
-              className='check'></input>
+              className='checkOne'></input>
             <SvgIcons name='smoke'
               width={100}
               fill='#051d54'
-              className='smokeSvg'/>
+              className='smokeSvg' />
             <label className='plusSvgSmoke'>Smoke Free:</label>
             <input
               type='checkbox'
               id='smoke'
               name='smoke'
-              className='check'></input>
+              className='checkOne'></input> */}
             <CreateProfileButton />
           </form>
         </Main>
@@ -209,5 +204,6 @@ class EditProfile extends Component {
     );
   }
 }
+
 
 export default withRouter(EditProfile)
