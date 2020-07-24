@@ -1,13 +1,11 @@
 import React, { Component } from 'react'
 import './myProfile.css'
 import { withRouter, Link } from 'react-router-dom'
-import axios from 'axios'
 import Main from '../../components/shared/Main/Main'
 import Header from '../../components/shared/Header/header'
 import Footer from '../../components/shared/Footer/footer'
 import { getProfile, updateProfile } from "../../services/profile"
 import UpdateProfileButton from '../../components/MyProfile/Button/updateButton'
-import DeactivatePopUp from '../../components/MyProfile/DeactivatePopUp/DeactivatePopUp'
 import { deleteProfile } from "../../services/profile";
 import ProfilePic2 from '../../components/MyProfile/ProfilePic/ProfilePic2'
 import SvgIcons from '../../components/shared/SVGIcons/SvgIcons'
@@ -33,17 +31,18 @@ class MyProfile extends Component {
   }
 
   async componentDidMount() {
-    //debugger
     let { id } = this.props.match.params
-    //debugger
     const res = await getProfile(id)
+
+    console.log(res.data)
+
     //debugger
     console.log(res)
     //debugger
     const profile = res;
     this.setState({ profile })
     console.log(this.state)
-    //debugger
+
   }
 
   handleClick = async (event) => {
@@ -56,17 +55,6 @@ class MyProfile extends Component {
     console.log(deleted._id)
     }
   
-
-  // async componentDidMount() {
-  //   let { id } = this.props.match.params
-  //   const res = await axios(`https://hitch-account-info.herokuapp.com/api/profile/${id}`)
-  //   console.log(res.data)
-  //   const profile = res.data
-  //   this.setState({ profile })
-  // }
-
-
-
   render() {
     const { profile } = this.state
     console.log(profile.bio)
@@ -90,7 +78,7 @@ class MyProfile extends Component {
                 width={39}
                 fill='#051d54' />
                 <h2 className="amenMusic">{profile.music}</h2>
-                <SvgIcons name='smoke'
+                {/* <SvgIcons name='smoke'
                 width={100}
                 fill='#051d54'
                 className='smokeSvg'/>
@@ -99,7 +87,7 @@ class MyProfile extends Component {
                 width={30}
                 fill='#051d54'
                 className='snackSvg'/>
-                  <div className="amenities-svg">Snacks Welcome</div>
+                  <div className="amenities-svg">Snacks Welcome</div> */}
                   </div>
                 <div className="button-container">
                   <Link to={`/profile/update/${id}`} ><UpdateProfileButton /></Link>
@@ -116,8 +104,8 @@ class MyProfile extends Component {
                   <div className="age">{profile.age}</div>
                   <div className="hometown">{profile.hometown}</div>
                   <br/>
-                  <div className="school">{profile.school}</div>
-                  <div className="major">{profile.major}</div><div className="graduation">{profile.graduationYear}</div>
+                  <div className="school">{profile.school}</div><div className="graduation">{profile.graduationYear}</div>
+                  <div className="major">{profile.major}</div>
                 </div>
               </div>
             </div>

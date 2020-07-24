@@ -47,6 +47,7 @@
   line-height: normal;
   letter-spacing: normal;
   color: #051d54;
+  width: 350px;
   
   
 }
@@ -310,6 +311,7 @@ word-break: break-all;
   flex-wrap: wrap;
   align-content: flex-start;
   height: 250px;
+  justify-content: space-around;
 
 }
 
@@ -330,21 +332,14 @@ word-break: break-all;
   color: #051d54;
   align-content: center;
 }
-/* 
+
 .smokeSvg{
  
     
-    font-family: 'Open Sans', sans-serif;
-    font-size: 24px;
-    font-weight: normal;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    color: #051d54;
+ 
   
 }
-
+/*
 .snackSvg{
   
     
