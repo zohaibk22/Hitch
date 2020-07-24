@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import CreateProfileButton from '../../components/EditProfile/Button/CreateProfileButton'
 import { getProfile, updateProfile } from '../../services/profile'
-import { withRouter } from 'react-router-dom'
+import { withRouter, Redirect } from 'react-router-dom'
 import './editProfile.css'
 import ProfilePic from '../../components/EditProfile/ProfilePic/ProfilePic'
 import PopUp from '../../components/EditProfile/PopUp/PopUp'
@@ -31,7 +31,9 @@ class EditProfile extends Component {
         active: true,
       },
       picStatus: true,
-      rImg: false
+      rImg: false,
+      websiteLoad: false,
+      id: ''
     }
   }
   componentWillMount() {
@@ -63,12 +65,33 @@ class EditProfile extends Component {
   }
   handleSubmit = async (event) => {
     event.preventDefault()
-    let { id } = this.props.match.params
-    await updateProfile(id, this.state.profile)
-    this.props.history.push(`/profile/${id}`)
+
+    
+      let { id } = this.props.match.params
+      const testVal = await updateProfile(id, this.state.profile)
+       await Promise.resolve(testVal).then(() => {
+
+        // this.props.history.push(`/profile/${id}`)
+
+        this.setState({
+          id:id,
+          websiteLoad: true
+        })
+
+       })
+
+      
+  
+    
+      // this.props.history.push(`/profile/${id}`)
+      // this.setState({ profile })
+    
   }
   render() {
     const profile = this.state.profile
+    if(this.state.websiteLoad){
+      return <Redirect to={`/profile/${this.state.id}`} />
+    }
     return (
       <>
         <Header />
