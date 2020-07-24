@@ -112,8 +112,10 @@ class MyProfile extends Component {
                 <div className="ProfilePic2"> <ProfilePic2/> </div>
                 <div className="name-pic">
                   <div className="name">{profile.fullName}</div>
+                  <br/>
                   <div className="age">{profile.age}</div>
-                  <div className="hometown">{profile.homeTown}</div>
+                  <div className="hometown">{profile.hometown}</div>
+                  <br/>
                   <div className="school">{profile.school}</div>
                   <div className="major">{profile.major}</div><div className="graduation">{profile.graduationYear}</div>
                 </div>
