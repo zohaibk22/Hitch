@@ -9,7 +9,6 @@ header {
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-
 }
 .logo {
   font-family: AirstreamNF;
@@ -36,25 +35,56 @@ li {
 }
 .one {
   margin-right: 81px;
+  margin-bottom: 55px;
+  /* padding-top: 55px; */
+  width: 180px;
 }
 .two {
   margin-right: 92px;
+  margin-bottom: 55px;
+  width: 122px;
 }
 .three {
   margin-right: 77px;
+  margin-bottom: 55px;
+  width: 155px;
 }
 .four {
   margin-right: 50px;
-
   margin-bottom: 55px;
+  width: 155px;
 }
-.four:visited{
-  color: red
+.five {
+  margin-bottom: 55px;
+  width: 100px;
+}
+.one:visited, .two:visited, .three:visited, .four:visited, .five:visited{
+  color: white;
 }
 a {
   text-decoration: none;
+  color: white;
+}
+.headerText {
+  padding-top: 40px;
+  font-weight: 400;
+}
+.hoverDive {
+  padding-top: 40px;
   display: flex;
-  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 11px;
+  text-decoration: none;
+  padding-bottom: 40px;
+}
+.headerText:hover, .hoverDive:hover {
+  background-color: white;
+  color: #051d54;
+}
+li:hover {
+  color: #051d54;
 }
 @media (max-width: 500px) {
   header {
@@ -74,6 +104,27 @@ a {
     align-self: center;
     color: #ffffff;
     text-decoration: none;
+  }
+  ul {
+    display: none;
+  }
+  li {
+    display: none;
+  }
+  .one {
+    display: none;
+  }
+  .two {
+    display: none;
+  }
+  .three {
+    display: none;
+  }
+  .four {
+    display: none;
+  }
+  .four:visited{
+    display: none;
   }
 }
 

@@ -59,7 +59,7 @@ class ProfilePic extends Component {
     const pic = this.state.profilePicture
     return (
       <>
-        <button className='circle'
+        <button className='circleOne'
           onClick={this.handleOpen}>
           <div className='head'></div>
           <div className='shoulder'></div>
