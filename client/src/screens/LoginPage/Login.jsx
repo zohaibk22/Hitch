@@ -82,8 +82,8 @@ class Login extends Component {
                         <button className = "signin-button">Sign In</button>
 
                         <div className="desktop-view">
-                        <p className="create-account-header combination">Do you have an Account?</p>
-                        <Link  to="/create/profile"><p className ="create-account-link combination">Create an Account</p></Link>
+                        <p className="create-account-header-desktop combination-desktop">Do you have an Account?</p>
+                        <Link  to="/create/profile"><p className ="create-account-link-desktop combination-desktop">Create an Account</p></Link>
                         </div>
                         </form>
                     </div>
