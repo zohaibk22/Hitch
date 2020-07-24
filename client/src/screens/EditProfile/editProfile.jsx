@@ -25,6 +25,9 @@ class EditProfile extends Component {
         age: '',
         recentReview: '',
         hometown: '',
+        travelPref: '',
+        smokeFree: '',
+        snacks: '',
         active: true,
       },
       picStatus: true,
@@ -170,7 +173,7 @@ class EditProfile extends Component {
                   id='music'
                   name='music'
                   placeholder='Enter favorite music genres'
-                  defaultValue={profile.music}
+                  defaultValue={profile.travelPref}
                   onChange={this.handleChange}></input>
               </div>
             </div>
