@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom'
 import './ProfilePic2.css'
-import SvgIcons from '../../shared/SVGIcons/SvgIcons'
-import { getProfile, updateProfile } from '../../../services/profile'
+import { getProfile } from '../../../services/profile'
 
 //The code that renders the SVG files comes from a
 //tutorial that can be found at the following url:
@@ -32,29 +31,6 @@ class ProfilePic2 extends Component {
       profilePicture: res.profilePicture
     })
   }
-  // handleOpen = () => {
-  //   this.setState({
-  //     show: true
-  //   })
-  // }
-  // handleClose = () => {
-  //   this.setState({
-  //     show: false
-  //   })
-  // }
-  // handleChange = (event) => {
-  //   const { value } = event.target
-  //   this.setState({
-  //       profilePicture: value
-  //   })
-  // }
-  // async handleSubmit() {
-  //   let { id } = this.props.match.params
-  //   const pic = await updateProfile(id, this.state.profilePicture)
-  //   this.setState({
-  //     pic
-  //   })
-  // }
   render() {
     const pic = this.state.profilePicture
     return (
@@ -72,20 +48,6 @@ class ProfilePic2 extends Component {
               background: 'transparent'
             }}>
           </div>}
-        {/* {this.state.show ?
-          <>
-            <div className='picMenu'>
-              <div className='imgInput'>
-                <label className='imgL'>please enter the url for your profile image</label>
-                <input className='imgI' defaultValue={this.state.profilePicture} onChange={this.handleChange}></input>
-                <button className='imgB' onclick={this.handleSubmit}>Submit</button>
-              </div>
-              <button className='fake' onClick={this.handleClose}></button>
-            </div>
-          </>
-          :
-          null}
-      </> */}
       </>
     );
   }
